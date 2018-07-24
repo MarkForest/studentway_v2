@@ -1,3 +1,4 @@
+branch master
 Yii 2 Basic Project Template
 ============================
 

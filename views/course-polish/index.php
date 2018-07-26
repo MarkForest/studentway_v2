@@ -12,9 +12,9 @@ $this->title='Polish|StudentWay';
                 <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
                 <a class="navbar-brand" href="<?=\yii\helpers\Url::toRoute('/site/index')?>"><img src="/images/logo_bell2.png"></a>
             </div>
-            <p class="navbar-text">
-                <a href="tel: +38(096) 814 11 32"><i><span><i class="icon-call-in"></i>+38(096) 814 11 32</span></i></a>
-            </p>
+<!--            <p class="navbar-text">-->
+<!--                <a href="tel: +38(096) 814 11 32"><i><span><i class="icon-call-in"></i>+38(096) 814 11 32</span></i></a>-->
+<!--            </p>-->
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="#" data-nav-section="home"><span><?=$loc=='uk'?'Головна':'Главная'?></span></a></li>
@@ -26,9 +26,7 @@ $this->title='Polish|StudentWay';
                             <span class="caret"></span></button>
                         <ul class="dropdown-menu">
                             <li><?= Html::a('Дніпро (uk)', ['course-polish/index?reg=dp&loc=uk']).' <i class="icon-circle"></i> '.Html::a('Днепр (ru)', ['course-polish/index?reg=dp&loc=ru']) ?></li>
-
                             <li><?= Html::a('Київ (uk)', ['course-polish/index?reg=ky&loc=uk']).' <i class="icon-circle"></i> '.Html::a('Киев (ru)', ['course-polish/index?reg=ky&loc=ru']) ?></li>
-
                             <li><?= Html::a('Харьків (uk)', ['course-polish/index?reg=kh&loc=uk']).' <i class="icon-circle"></i> '.Html::a('Харьков (ru)', ['course-polish/index?reg=kh&loc=ru']) ?></li>
 
                             <li><?= Html::a('Вінниця (uk)', ['course-polish/index?reg=vn&loc=uk']).' <i class="icon-circle"></i> '.Html::a('Винница (ru)', ['course-polish/index?reg=vn&loc=ru']) ?></li>
@@ -57,20 +55,6 @@ $this->title='Polish|StudentWay';
     <div class="gradient"></div>
     <div class="container">
         <div class="row">
-            <div class="col-md-6 home-first-text-block pull-left">
-                <p class="text-block">
-                    <?=$loc=='uk'?$home->header_title_1_uk:$home->header_title_1_ru?>
-                </p>
-            </div>
-
-            <div class="col-md-6 home-first-text-block pull-right">
-                <p class="text-block">
-                    <?=$loc=='uk'?$home->header_title_2_uk:$home->header_title_2_ru?>
-                </p>
-            </div>
-        </div>
-
-        <div class="row">
 			<div class="col-md-12 text-right soc-block">
                 <a target="_blank" href="<?=\yii\helpers\Url::to('https://www.facebook.com/studentway.ukraina/')?>"><img src="/images/facebook_color.png" alt="" class="soc-icons"></a>
                 <a target="_blank" href="<?=\yii\helpers\Url::to('https://www.instagram.com/studentway_ukraina/')?>"><img src="/images/instagram_color.png" alt="" class="soc-icons"></a>
@@ -89,22 +73,23 @@ $this->title='Polish|StudentWay';
                 <?php endif;?>
             </div>
 
-            <div class="col-md-5 home-content-text-block">
-               <div class="stock-block">
-                   <p><?=$loc=='uk'?$home->stock_content_uk:$home->stock_content_ru?></p>
-               </div>
-               <div class="cast">
-                   <p><?=$home->cost?><span>грн</span> </p>
-               </div>
-
-                    <div class="cast-button" onclick="LIRAX.showWidget()">
-                        <p><?=$loc=='uk'?$home->button_text_uk:$home->button_text_ru?></p>
+            <div class="col-md-4 col-md-offset-1 home-content-text-block">
+                <form class="form">
+                    <p>Приглашаем на бесплатное занятие</p>
+                    <h3>29.06.2018 Почуствуй разницу</h3>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Ваше имя и фамилия" id="fullname">
                     </div>
-
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Мобильный телефон" id="phoneNumber">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btnHomeForm" value="Хочу выбрать курсы">
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-
     </div>
 </section>
 

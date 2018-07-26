@@ -1,16 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: mark
- * Date: 26.09.17
- * Time: 19:58
- */
-
 namespace app\models;
-
-
 use yii\base\Model;
-
 class AskQuestionForm extends Model
 {
     public $name;

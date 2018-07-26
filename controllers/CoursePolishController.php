@@ -6,6 +6,7 @@ namespace app\controllers;
 use app\models\AskQuestionForm;
 use app\models\Assurance;
 use app\models\Footer;
+use app\models\FormHome;
 use app\models\Gallery;
 use app\models\GettingFifth;
 use app\models\GettingFirst;
@@ -80,6 +81,7 @@ class CoursePolishController extends Controller
         //шапка сайта Home
         $home = Home::findOne(['region_key'=>$reg]);
         $listHome = ListHome::find()->where(['home_id'=>$home->id])->all();
+        $formHome = FormHome::findOne(['region_key'=>$reg]);
 
         //Привелегии
         $privilege = Privilege::findOne(['region_key'=>$reg]);
@@ -177,6 +179,7 @@ class CoursePolishController extends Controller
         return $this->render('index',[
 
             'drop'=>$drop,
+            'formHome'=>$formHome,
             'home'=>$home,
             'listHome'=>$listHome,
             'privilege'=>$privilege,

@@ -42,7 +42,6 @@ $this->title='Polish|StudentWay';
                             <li><?= Html::a('Біла Церква (uk)', ['course-polish/index?reg=bc&loc=uk']) ?> <i class="icon-circle"></i> <?= Html::a('Белая Церковь (ru)', ['course-polish/index?reg=bc&loc=ru']) ?></li>
 
                             <li><?= Html::a('Cлов\'янськ (uk)', ['course-polish/index?reg=sl&loc=uk']) ?> <i class="icon-circle"></i> <?= Html::a('Славянск (ru)', ['course-polish/index?reg=sl&loc=ru']) ?></li>
-
                         </ul>
                     </li>
                 </ul>
@@ -75,16 +74,16 @@ $this->title='Polish|StudentWay';
 
             <div class="col-md-4 col-md-offset-1 home-content-text-block">
                 <form class="form">
-                    <p>Приглашаем на бесплатное занятие</p>
-                    <h3>29.06.2018 Почуствуй разницу</h3>
+                    <p><?=$loc=='ru'?$formHome['desc_ru']:$formHome['desc_uk']?></p>
+                    <h3><?=$loc=='ru'?$formHome['header_ru']:$formHome['header_uk']?></h3>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Ваше имя и фамилия" id="fullname">
+                        <input type="text" class="form-control" placeholder="<?=$loc=='ru'?$formHome['name_placeholder_ru']:$formHome['name_placeholder_uk']?>" id="fullname">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Мобильный телефон" id="phoneNumber">
+                        <input type="text" class="form-control" placeholder="<?=$loc=='ru'?$formHome['tell_placeholder_ru']:$formHome['tell_placeholder_uk']?>" id="phoneNumber">
                     </div>
                     <div class="form-group">
-                        <input type="submit" class="btnHomeForm" value="Хочу выбрать курсы">
+                        <input type="submit" class="btnHomeForm" value="<?=$loc=='ru'?$formHome['button_text_ru']:$formHome['button_text_uk']?>">
                     </div>
                 </form>
             </div>

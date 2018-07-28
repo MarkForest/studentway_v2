@@ -45,6 +45,8 @@ public $js = [
     'js/countdown.js',
     'js/sendForms.js',
     'js/lightbox.min.js',
+    'js/jquery.maskedinput.min.js',
+    'js/maskedinput.js',
 
 //
 

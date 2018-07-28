@@ -11,6 +11,7 @@ namespace app\modules\admin\controllers;
 
 use app\models\Assurance;
 use app\models\Footer;
+use app\models\FormHome;
 use app\models\GettingFifth;
 use app\models\GettingFirst;
 use app\models\GettingFourth;
@@ -36,6 +37,7 @@ use app\models\Tariffs;
 use app\models\Team;
 use app\modules\admin\models\AssuranceForm;
 use app\modules\admin\models\FooterForm;
+use app\modules\admin\models\FormHomeForm;
 use app\modules\admin\models\GettingFifthForm;
 use app\modules\admin\models\GettingFourthForm;
 use app\modules\admin\models\GettingSecondForm;
@@ -57,8 +59,9 @@ class AdminCoursePolishController extends Controller
     public function actionSaveHome(){
         $homeForm = new HomeForm();
         if (Yii::$app->request->isAjax){
-
             $homeForm->load(Yii::$app->request->post());
+//            $homeForm->title_ru = $_POST['HomeForm']['title_uk'];
+//            $homeForm->title_ru = $_POST['HomeForm']['title_ru'];
             $homeForm->listHome = $_POST['HomeForm']['listHome'];
             return ($homeForm->validate() && $homeForm->saveData());
         }
@@ -288,6 +291,8 @@ class AdminCoursePolishController extends Controller
         $home = Home::findOne(['region_key'=>$reg]);
         $listHome = ListHome::find()->where(['home_id'=>$home->id])->all();
         $homeForm = new HomeForm();
+        $formHome = FormHome::findOne(['region_key'=>$reg]);
+        $formHomeForm = new FormHomeForm();
 
         //Привелегии
         $privilege = Privilege::findOne(['region_key'=>$reg]);
@@ -367,6 +372,8 @@ class AdminCoursePolishController extends Controller
         return $this->render('index',[
 
             'reg'=>$reg,
+            'formHome'=>$formHome,
+            'formHomeForm' =>$formHomeForm,
             'drop'=>$drop,
             'home'=>$home,
             'listHome'=>$listHome,

@@ -56,10 +56,10 @@ $this->title = 'Admin|Edit'
 <section id="fh5co-home" data-section="home">
     <div class="gradient"></div>
     <div class="container">
-
         <div class="row">
-            <div class="col-md-6 home-first-text-block pull-left">
-                <p>
+            <div class="row hidden">
+                <div class="col-md-6 home-first-text-block pull-left">
+                    <p>
                     <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#header-title-uk"><img src="/images/uk.png" alt="uk" class="img-responsive"></a></li>
                         <li><a data-toggle="tab" href="#header-title-ru"><img src="/images/ru.png" alt="ru" class="img-responsive"></a></li>
@@ -68,58 +68,54 @@ $this->title = 'Admin|Edit'
                     <div class="tab-content">
                         <div id="header-title-uk" class="tab-pane fade in active">
                             <?=$form->field($homeForm,'header_title_1_uk')->textarea([
-                                    'value'=>$home->header_title_1_uk,
-                                    'class'=>'textarea',
-                                    'rows'=>5,
-                                    'cols'=>10
+                                'value'=>$home->header_title_1_uk,
+                                'class'=>'textarea',
+                                'rows'=>5,
+                                'cols'=>10
                             ])->label(false)?>
                         </div>
                         <div id="header-title-ru" class="tab-pane fade">
                             <?=$form->field($homeForm,'header_title_1_ru')->textarea([
-                                    'value'=>$home->header_title_1_ru,
-                                    'class'=>'textarea',
-                                    'rows'=>5,
-                                    'cols'=>10
+                                'value'=>$home->header_title_1_ru,
+                                'class'=>'textarea',
+                                'rows'=>5,
+                                'cols'=>10
                             ])->label(false)?>
                         </div>
                     </div>
-                </p>
-            </div>
-
-            <div class="col-md-6 home-first-text-block pull-right">
-                <p>
-                <ul class="nav nav-tabs">
-                    <li class="active"><a data-toggle="tab" href="#header-title2-uk"><img src="/images/uk.png" alt="uk" class="img-responsive"></a></li>
-                    <li><a data-toggle="tab" href="#header-title2-ru"><img src="/images/ru.png" alt="ru" class="img-responsive"></a></li>
-                </ul>
-
-                <div class="tab-content">
-                    <div id="header-title2-uk" class="tab-pane fade in active">
-                        <?=$form->field($homeForm,'header_title_2_uk')->textarea([
-                            'value'=>$home->header_title_2_uk,
-                            'class'=>'textarea',
-                            'rows'=>5,
-                            'cols'=>10
-                        ])->label(false)?>
-
-                    </div>
-                    <div id="header-title2-ru" class="tab-pane fade">
-                        <?=$form->field($homeForm,'header_title_2_ru')->textarea([
-                            'value'=>$home->header_title_2_ru,
-                            'class'=>'textarea',
-                            'rows'=>5,
-                            'cols'=>10
-                        ])->label(false)?>
-
-                    </div>
+                    </p>
                 </div>
-                </p>
+
+                <div class="col-md-6 home-first-text-block pull-right">
+                    <p>
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#header-title2-uk"><img src="/images/uk.png" alt="uk" class="img-responsive"></a></li>
+                        <li><a data-toggle="tab" href="#header-title2-ru"><img src="/images/ru.png" alt="ru" class="img-responsive"></a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="header-title2-uk" class="tab-pane fade in active">
+                            <?=$form->field($homeForm,'header_title_2_uk')->textarea([
+                                'value'=>$home->header_title_2_uk,
+                                'class'=>'textarea',
+                                'rows'=>5,
+                                'cols'=>10
+                            ])->label(false)?>
+
+                        </div>
+                        <div id="header-title2-ru" class="tab-pane fade">
+                            <?=$form->field($homeForm,'header_title_2_ru')->textarea([
+                                'value'=>$home->header_title_2_ru,
+                                'class'=>'textarea',
+                                'rows'=>5,
+                                'cols'=>10
+                            ])->label(false)?>
+
+                        </div>
+                    </div>
+                    </p>
+                </div>
             </div>
-        </div>
-
-
-
-        <div class="row">
             <div class="col-md-7 home-content-text-block">
 
                 <ul class="nav nav-tabs">
@@ -194,92 +190,129 @@ $this->title = 'Admin|Edit'
                 <?php endif;?>
             </div>
 
-            <div class="col-md-5 home-content-text-block">
-                <div class="stock-block">
-
+            <div class="col-md-4 col-md-offset-1 home-content-text-block">
+                <div class="form">
                     <ul class="nav nav-tabs">
-                        <li class="active"><a data-toggle="tab" href="#home-stock-content-uk"><img src="/images/uk.png" alt="uk" class="img-responsive"></a></li>
-                        <li><a data-toggle="tab" href="#home-stock-content-ru"><img src="/images/ru.png" alt="ru" class="img-responsive"></a></li>
+                        <li class="active"><a data-toggle="tab" href="#formHome-desc-uk"><img src="/images/uk.png" alt="uk" class="img-responsive"></a></li>
+                        <li><a data-toggle="tab" href="#formHome-desc-ru"><img src="/images/ru.png" alt="ru" class="img-responsive"></a></li>
                     </ul>
-
                     <div class="tab-content">
-                        <div id="home-stock-content-uk" class="tab-pane fade in active">
-
-                            <h3>
-                                <?=$form->field($homeForm,'stock_content_uk')->textarea([
-                                    'value'=>$home->stock_content_uk,
+                        <div id="formHome-desc-uk" class="tab-pane fade in active">
+                            <p>
+                                <?=$form->field($homeForm,'desc_uk')->textarea([
+                                    'value'=>$formHome['desc_uk'],
                                     'class'=>'textarea',
-                                    'rows'=>6,
+                                    'rows'=>3,
                                     'cols'=>10
                                 ])->label(false)?>
-                            </h3>
-
-
+                            </p>
                         </div>
-                        <div id="home-stock-content-ru" class="tab-pane fade">
-
-                            <h3>
-                                <?=$form->field($homeForm,'stock_content_ru')->textarea([
-                                    'value'=>$home->stock_content_ru,
+                        <div id="formHome-desc-ru" class="tab-pane fade">
+                            <p>
+                                <?=$form->field($homeForm,'desc_ru')->textarea([
+                                    'value'=>$formHome['desc_ru'],
                                     'class'=>'textarea',
-                                    'rows'=>6,
+                                    'rows'=>3,
                                     'cols'=>10
                                 ])->label(false)?>
-                            </h3>
-
+                            </p>
                         </div>
                     </div>
-
-                </div>
-                <div class="cast hidden-xs">
-                    <h1>
-                        <?=$form->field($homeForm,'cost')->textarea([
-                            'value'=>$home->cost,
-                            'class'=>'textInput',
-                            'rows'=>1,
-                        ])->label(false)?>
-                    </h1>
-                </div>
-                <ul class="nav nav-tabs">
-                    <li class="active"><a data-toggle="tab" href="#home-button-text-uk"><img src="/images/uk.png" alt="uk" class="img-responsive"></a></li>
-                    <li><a data-toggle="tab" href="#home-button-text-ru"><img src="/images/ru.png" alt="ru" class="img-responsive"></a></li>
-                </ul>
-
-                    <div class="cast-button">
-
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#formHome-header-uk"><img src="/images/uk.png" alt="uk" class="img-responsive"></a></li>
+                        <li><a data-toggle="tab" href="#formHome-header-ru"><img src="/images/ru.png" alt="ru" class="img-responsive"></a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="formHome-header-uk" class="tab-pane fade in active">
+                            <h3>
+                                <?=$form->field($homeForm,'header_uk')->textarea([
+                                    'value'=>$formHome['header_uk'],
+                                    'class'=>'textarea',
+                                    'rows'=>3,
+                                    'cols'=>10
+                                ])->label(false)?>
+                            </h3>
+                        </div>
+                        <div id="formHome-header-ru" class="tab-pane fade">
+                            <h3>
+                                <?=$form->field($homeForm,'header_ru')->textarea([
+                                    'value'=>$formHome['header_ru'],
+                                    'class'=>'textarea',
+                                    'rows'=>3,
+                                    'cols'=>10
+                                ])->label(false)?>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#formHome-name_placeholder-uk"><img src="/images/uk.png" alt="uk" class="img-responsive"></a></li>
+                            <li><a data-toggle="tab" href="#formHome-name_placeholder-ru"><img src="/images/ru.png" alt="ru" class="img-responsive"></a></li>
+                        </ul>
                         <div class="tab-content">
-                            <div id="home-button-text-uk" class="tab-pane fade in active">
-
-                               <h3>
-                                   <?=$form->field($homeForm,'button_text_uk')->textarea([
-                                       'value'=>$home->button_text_uk,
-                                       'class'=>'textarea',
-                                       'rows'=>3,
-                                   ])->label(false)?>
-                               </h3>
-
-
-                            </div>
-                            <div id="home-button-text-ru" class="tab-pane fade">
-
-                                <h3>
-                                    <?=$form->field($homeForm,'button_text_ru')->textarea([
-                                        'value'=>$home->button_text_ru,
-                                        'class'=>'textarea',
-                                        'rows'=>3,
+                            <div id="formHome-name_placeholder-uk" class="tab-pane fade in active">
+                                <p>
+                                    <?=$form->field($homeForm,'name_placeholder_uk')->textInput([
+                                        'value'=>$formHome['name_placeholder_uk'],
                                     ])->label(false)?>
-                                </h3>
-
+                                </p>
+                            </div>
+                            <div id="formHome-name_placeholder-ru" class="tab-pane fade">
+                                <p>
+                                    <?=$form->field($homeForm,'name_placeholder_ru')->textInput([
+                                        'value'=>$formHome['name_placeholder_ru'],
+                                    ])->label(false)?>
+                               </p>
                             </div>
                         </div>
-
                     </div>
+                    <div class="form-group">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#formHome-tell_placeholder-uk"><img src="/images/uk.png" alt="uk" class="img-responsive"></a></li>
+                            <li><a data-toggle="tab" href="#formHome-tell_placeholder-ru"><img src="/images/ru.png" alt="ru" class="img-responsive"></a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="formHome-tell_placeholder-uk" class="tab-pane fade in active">
+                                <p>
+                                    <?=$form->field($homeForm,'tell_placeholder_uk')->textInput([
+                                        'value'=>$formHome['tell_placeholder_uk'],
+                                    ])->label(false)?>
+                                </p>
+                            </div>
+                            <div id="formHome-tell_placeholder-ru" class="tab-pane fade">
+                                <p>
+                                    <?=$form->field($homeForm,'tell_placeholder_ru')->textInput([
+                                        'value'=>$formHome['tell_placeholder_ru'],
+                                    ])->label(false)?>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#formHome-button_text-uk"><img src="/images/uk.png" alt="uk" class="img-responsive"></a></li>
+                            <li><a data-toggle="tab" href="#formHome-button_text-ru"><img src="/images/ru.png" alt="ru" class="img-responsive"></a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="formHome-button_text-uk" class="tab-pane fade in active">
+                                <p>
+                                    <?=$form->field($homeForm,'form_button_text_ru')->textInput([
+                                        'value'=>$formHome['button_text_uk'],
+                                    ])->label(false)?>
+                                </p>
+                            </div>
+                            <div id="formHome-button_text-ru" class="tab-pane fade">
+                                <p>
+                                    <?=$form->field($homeForm,'form_button_text_uk')->textInput([
+                                        'value'=>$formHome['button_text_ru'],
+                                    ])->label(false)?>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
             </div>
-        </div>
     </div>
-
-    </div>
-
 </section>
 <div class="container save-container">
     <div class="vertical-line center-block"></div>

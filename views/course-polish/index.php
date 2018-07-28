@@ -74,16 +74,16 @@ $this->title='Polish|StudentWay';
 
             <div class="col-md-4 col-md-offset-1 home-content-text-block">
                 <form class="form">
-                    <p><?=$loc=='ru'?$formHome['desc_ru']:$formHome['desc_uk']?></p>
-                    <h3><?=$loc=='ru'?$formHome['header_ru']:$formHome['header_uk']?></h3>
+                    <p><?=nl2br($loc=='ru'?$formHome['desc_ru']:$formHome['desc_uk'])?></p>
+                    <h3><?=nl2br($loc=='ru'?$formHome['header_ru']:$formHome['header_uk'])?></h3>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="<?=$loc=='ru'?$formHome['name_placeholder_ru']:$formHome['name_placeholder_uk']?>" id="fullname">
+                        <input type="text" class="form-control" placeholder="<?=nl2br($loc=='ru'?$formHome['name_placeholder_ru']:$formHome['name_placeholder_uk'])?>" id="fullname">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="<?=$loc=='ru'?$formHome['tell_placeholder_ru']:$formHome['tell_placeholder_uk']?>" id="phoneNumber">
+                        <input type="text" class="form-control" placeholder="<?=nl2br($loc=='ru'?$formHome['tell_placeholder_ru']:$formHome['tell_placeholder_uk'])?>" id="phoneNumber">
                     </div>
                     <div class="form-group">
-                        <input type="submit" class="btnHomeForm" value="<?=$loc=='ru'?$formHome['button_text_ru']:$formHome['button_text_uk']?>">
+                        <input type="submit" class="btnHomeForm" value="<?=nl2br($loc=='ru'?$formHome['button_text_ru']:$formHome['button_text_uk'])?>">
                     </div>
                 </form>
             </div>

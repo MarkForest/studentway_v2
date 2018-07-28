@@ -7,6 +7,7 @@ use app\models\ILevelMessage;
 use app\models\IMessageContact;
 use app\models\Question;
 use app\models\Records;
+use app\models\RequestCallMe;
 use yii\web\Controller;
 
 /**
@@ -14,6 +15,28 @@ use yii\web\Controller;
  */
 class DefaultController extends Controller
 {
+
+    public function actionRequestCallMeMove(){
+        if(\Yii::$app->request->isPost){
+            $callmy = RequestCallMe::findOne($_POST['status']);
+            $callmy->status = 1;
+            $callmy->save(false);
+        }
+        $questions = Askquestion::find()->where(['status'=>0])->all();
+        $record = Records::find()->where(['status'=>0])->all();
+        $level = ILevelMessage::find()->where(['status'=>0])->all();
+        $message = IMessageContact::find()->where(['status'=>0])->all();
+        $requestCallMe = RequestCallMe::find()->where(['status'=>0])->all();
+
+
+        return $this->render('index',[
+            'questions'=>$questions,
+            'records'=>$record,
+            'message'=>$message,
+            'level'=>$level,
+            'requestCallMe'=>$requestCallMe,
+        ]);
+    }
 
     public function actionQuestionMove(){
         if(\Yii::$app->request->isPost){
@@ -25,6 +48,7 @@ class DefaultController extends Controller
         $record = Records::find()->where(['status'=>0])->all();
         $level = ILevelMessage::find()->where(['status'=>0])->all();
         $message = IMessageContact::find()->where(['status'=>0])->all();
+        $requestCallMe = RequestCallMe::find()->where(['status'=>0])->all();
 
 
         return $this->render('index',[
@@ -32,6 +56,7 @@ class DefaultController extends Controller
             'records'=>$record,
             'level'=>$level,
             'message'=>$message,
+            'requestCallMe'=>$requestCallMe,
         ]);
 
     }
@@ -47,6 +72,7 @@ class DefaultController extends Controller
         $record = Records::find()->where(['status'=>0])->all();
         $level = ILevelMessage::find()->where(['status'=>0])->all();
         $message = IMessageContact::find()->where(['status'=>0])->all();
+        $requestCallMe = RequestCallMe::find()->where(['status'=>0])->all();
 
 
         return $this->render('index',[
@@ -54,6 +80,7 @@ class DefaultController extends Controller
             'records'=>$record,
             'level'=>$level,
             'message'=>$message,
+            'requestCallMe'=>$requestCallMe,
         ]);
 
     }
@@ -68,6 +95,7 @@ class DefaultController extends Controller
         $record = Records::find()->where(['status'=>0])->all();
         $level = ILevelMessage::find()->where(['status'=>0])->all();
         $message = IMessageContact::find()->where(['status'=>0])->all();
+        $requestCallMe = RequestCallMe::find()->where(['status'=>0])->all();
 
 
         return $this->render('index',[
@@ -75,6 +103,7 @@ class DefaultController extends Controller
             'records'=>$record,
             'level'=>$level,
             'message'=>$message,
+            'requestCallMe'=>$requestCallMe,
         ]);
 
     }
@@ -89,6 +118,7 @@ class DefaultController extends Controller
         $record = Records::find()->where(['status'=>0])->all();
         $level = ILevelMessage::find()->where(['status'=>0])->all();
         $message = IMessageContact::find()->where(['status'=>0])->all();
+        $requestCallMe = RequestCallMe::find()->where(['status'=>0])->all();
 
 
         return $this->render('index',[
@@ -96,6 +126,7 @@ class DefaultController extends Controller
             'records'=>$record,
             'level'=>$level,
             'message'=>$message,
+            'requestCallMe'=>$requestCallMe,
         ]);
 
     }
@@ -107,7 +138,7 @@ class DefaultController extends Controller
         $record = Records::find()->where(['status'=>0])->all();
         $level = ILevelMessage::find()->where(['status'=>0])->all();
         $message = IMessageContact::find()->where(['status'=>0])->all();
-
+        $requestCallMe = RequestCallMe::find()->where(['status'=>0])->all();
 
 
         return $this->render('index',[
@@ -115,6 +146,7 @@ class DefaultController extends Controller
             'records'=>$record,
             'message'=>$message,
             'level'=>$level,
+            'requestCallMe'=>$requestCallMe,
         ]);
     }
 

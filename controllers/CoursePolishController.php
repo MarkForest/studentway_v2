@@ -33,6 +33,7 @@ use app\models\RecordsForm;
 use app\models\Services;
 use app\models\Tariffs;
 use app\models\Team;
+use app\models\RequestCallMeForm;
 use Yii;
 use yii\web\AssetBundle;
 use yii\web\Controller;
@@ -55,6 +56,7 @@ class CoursePolishController extends Controller
 
         $model = new RecordsForm;
         $modelAsk = new AskQuestionForm;
+        $modelRequestCallMe = new RequestCallMeForm();
 
         if($reg=='dp'&& $loc=='uk')$drop = 'Дніпро (UK)';
         if($reg=='dp'&& $loc=='ru')$drop = 'Днепр (RU)';
@@ -210,6 +212,8 @@ class CoursePolishController extends Controller
             'reg'=>$reg,
             'model'=>$model,
             'modelAsk'=>$modelAsk,
+            'modelRequestCallMe'=>$modelRequestCallMe,
+
         ]);
     }
 

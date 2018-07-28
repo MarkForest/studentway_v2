@@ -5,6 +5,27 @@ $(document).ready(function () {
 
     $('.navbar-brand').css('color','white');
 
+    $('[id="RequestCallMeForm"]').on('beforeSubmit',function () {
+        $.ajax({
+            url:'/admin/admin-course-polish/save-request-call-me',
+            type: 'POST',
+            data: $(this).serialize(),
+            success: function (res) {
+                if(res == true) {
+                    $('.record-success').fadeToggle(1000);
+                    $('.record-success').fadeOut(10000);
+                }
+                else{
+                    $('.record-danger').fadeToggle(1000);
+                    $('.record-danger').fadeOut(20000);
+                }
+            },
+            error:function () {
+                alert('Error')
+            }
+        });
+        return false;
+    });
 
     $('[id="RecordForm"]').on('beforeSubmit',function () {
 

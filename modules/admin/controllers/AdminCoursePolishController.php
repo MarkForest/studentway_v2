@@ -32,6 +32,7 @@ use app\models\ListTeam;
 use app\models\Partners;
 use app\models\Privilege;
 use app\models\Question;
+use app\models\RequestCallMeForm;
 use app\models\Services;
 use app\models\Tariffs;
 use app\models\Team;
@@ -49,6 +50,7 @@ use app\modules\admin\models\QuestionForm;
 use app\modules\admin\models\ServicesForm;
 use app\modules\admin\models\TariffsForm;
 use app\modules\admin\models\TeamForm;
+use Codeception\Module\Yii2;
 use Yii;
 use yii\web\Controller;
 
@@ -242,6 +244,15 @@ class AdminCoursePolishController extends Controller
             $gettingFifthForm->button_text_ru = $_POST['GettingFifthForm']['button_text_ru'];
             $gettingFifthForm->reg = $_POST['GettingFifthForm']['reg'];
             return ($gettingFifthForm->validate()&&$gettingFifthForm->saveData());
+        }
+    }
+
+    public function actionSaveRequestCallMe(){
+        $requestCallMeForm = new RequestCallMeForm();
+        if(Yii::$app->request->isAjax){
+            $requestCallMeForm->load(Yii::$app->request->post());
+            $requestCallMeForm->status = 0;
+            return ($requestCallMeForm->validate() && $requestCallMeForm->addRequestCallMe());
         }
     }
 

@@ -7,7 +7,7 @@ $(document).ready(function () {
 
     $('[id="RequestCallMeForm"]').on('beforeSubmit',function () {
         $.ajax({
-            url:'/admin/admin-course-polish/save-request-call-me',
+            url:'/course-polish/save-request-call-me',
             type: 'POST',
             data: $(this).serialize(),
             success: function (res) {

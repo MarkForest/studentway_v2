@@ -247,14 +247,7 @@ class AdminCoursePolishController extends Controller
         }
     }
 
-    public function actionSaveRequestCallMe(){
-        $requestCallMeForm = new RequestCallMeForm();
-        if(Yii::$app->request->isAjax){
-            $requestCallMeForm->load(Yii::$app->request->post());
-            $requestCallMeForm->status = 0;
-            return ($requestCallMeForm->validate() && $requestCallMeForm->addRequestCallMe());
-        }
-    }
+
 
 
     public function actionSaveFooter(){

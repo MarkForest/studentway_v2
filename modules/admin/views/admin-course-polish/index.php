@@ -296,14 +296,14 @@ $this->title = 'Admin|Edit'
                         <div class="tab-content">
                             <div id="formHome-button_text-uk" class="tab-pane fade in active">
                                 <p>
-                                    <?=$form->field($homeForm,'form_button_text_ru')->textInput([
+                                    <?=$form->field($homeForm,'form_button_text_uk')->textInput([
                                         'value'=>$formHome['button_text_uk'],
                                     ])->label(false)?>
                                 </p>
                             </div>
                             <div id="formHome-button_text-ru" class="tab-pane fade">
                                 <p>
-                                    <?=$form->field($homeForm,'form_button_text_uk')->textInput([
+                                    <?=$form->field($homeForm,'form_button_text_ru')->textInput([
                                         'value'=>$formHome['button_text_ru'],
                                     ])->label(false)?>
                                 </p>

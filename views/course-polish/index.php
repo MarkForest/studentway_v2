@@ -12,9 +12,6 @@ $this->title='Polish|StudentWay';
                 <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
                 <a class="navbar-brand" href="<?=\yii\helpers\Url::toRoute('/site/index')?>"><img src="/images/logo_bell2.png"></a>
             </div>
-<!--            <p class="navbar-text">-->
-<!--                <a href="tel: +38(096) 814 11 32"><i><span><i class="icon-call-in"></i>+38(096) 814 11 32</span></i></a>-->
-<!--            </p>-->
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="#" data-nav-section="home"><span><?=$loc=='uk'?'Головна':'Главная'?></span></a></li>

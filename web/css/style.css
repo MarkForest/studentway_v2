@@ -346,7 +346,6 @@ text-decoration: none;
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 2;
   background: rgba(0,0,0, 0.5);
 }
 
@@ -1673,3 +1672,108 @@ a:hover{
 #galery h2,#galery h3{
   opacity: 1;
 }
+
+/*################################*/
+/*######### Moby device ##########*/
+/*######### Home #################*/
+.mobi__contact p{
+  padding:0;
+  margin: 0;
+  font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+}
+
+.mobi__contact{
+  font-weight: 500;
+}
+#fh5co-home .mobi__contact_tel a{
+  color:#fff;
+  font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+  text-decoration: none;
+}
+
+#fh5co-home .mobi__header_text{
+  color:#fff;
+  margin-top: 25px;
+  font-weight: bold;
+  font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+
+}
+#fh5co-home .mobi__desc_text{
+  color:#fff;
+  margin: 0;
+  font-weight: bold;
+  line-height: 3rem;
+  font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+}
+#fh5co-home .mobi__desc{
+  border: 3px solid #0799d2;
+  border-radius: 8px;
+  padding:10px;
+}
+/*######### Explore #################*/
+#fh5co-explore .mobi__explore_header h2{
+  font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+  color:#000;
+}
+#fh5co-explore .mobi__explore_list{
+  list-style: none;
+  padding: 0;
+  font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+  color:#000;
+}
+#fh5co-explore .mobi__explore_list i{
+  margin-right: 10px;
+  color:#0799d2;
+  font-weight: bold;
+}
+#fh5co-explore .mobi__explore_levels_item{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 8px;
+  padding-bottom:8px;
+  border-radius: 5px;
+  margin-top: 15px;
+  font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+}
+#fh5co-explore .mobi__explore_levels_item p{
+  margin: 0;
+  padding:0;
+  font-size: 12px;
+  text-align: center;
+}
+
+#fh5co-explore .mobi__explore_levels{
+  list-style: none;
+  padding:0;
+}
+#fh5co-explore .mobi__explore_levels_item{
+  background: #0799d2;
+  color:#fff;
+}
+#fh5co-explore .mobi__explore_levels_item_level p{
+  color: #FF8500;
+}
+#fh5co-explore .mobi__explore_levels_item_price p{
+  color: #FF8500;
+}
+#fh5co-explore .mobi__explore_levels_item_level p:first-child,
+#fh5co-explore .mobi__explore_levels_item_price p:first-child
+{
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#fh5co-explore .mobi__explore_button{
+  padding:15px;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  background: #FF8500;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+

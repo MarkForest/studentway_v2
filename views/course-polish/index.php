@@ -52,13 +52,13 @@ $this->title='Polish|StudentWay';
     <div class="container">
         <div class="row">
 			<div class="col-md-12 text-right soc-block">
-                <a target="_blank" href="<?=\yii\helpers\Url::to('https://www.facebook.com/studentway.ukraina/')?>"><img src="/images/facebook_color.png" alt="" class="soc-icons"></a>
-                <a target="_blank" href="<?=\yii\helpers\Url::to('https://www.instagram.com/studentway_ukraina/')?>"><img src="/images/instagram_color.png" alt="" class="soc-icons"></a>
-                <a target="_blank" href="<?=\yii\helpers\Url::to('https://www.youtube.com/channel/UCTZ6RKr62Fc3GgXOdnvWXuQ')?>"><img src="/images/youtube_color.png" alt="" class="soc-icons"></a>
-                <a target="_blank" href="<?=\yii\helpers\Url::to('https://web.telegram.org/#/im?p=@studentwaypl')?>"><img src="/images/telegram.png" alt="" class="soc-icons"></a>
-                <a target="_blank" href="<?=\yii\helpers\Url::to('https://twitter.com/StudentwayU')?>"><img src="/images/twiter_color.png" alt="" class="soc-icons"></a>
+                <a target="_blank" href="<?=\yii\helpers\Url::to('https://www.facebook.com/studentway.ukraina/')?>"><img src="/images/facebook_color.png" alt="" class="soc-icons hidden-sm hidden-xs"></a>
+                <a target="_blank" href="<?=\yii\helpers\Url::to('https://www.instagram.com/studentway_ukraina/')?>"><img src="/images/instagram_color.png" alt="" class="soc-icons hidden-sm hidden-xs"></a>
+                <a target="_blank" href="<?=\yii\helpers\Url::to('https://www.youtube.com/channel/UCTZ6RKr62Fc3GgXOdnvWXuQ')?>"><img src="/images/youtube_color.png" alt="" class="soc-icons hidden-sm hidden-xs"></a>
+                <a target="_blank" href="<?=\yii\helpers\Url::to('https://web.telegram.org/#/im?p=@studentwaypl')?>"><img src="/images/telegram.png" alt="" class="soc-icons hidden-sm hidden-xs"></a>
+                <a target="_blank" href="<?=\yii\helpers\Url::to('https://twitter.com/StudentwayU')?>"><img src="/images/twiter_color.png" alt="" class="soc-icons hidden-sm hidden-xs"></a>
             </div>
-            <div class="col-md-7 home-content-text-block">
+            <div class="col-md-7 home-content-text-block hidden-xs hidden-sm">
                 <h1><?=$loc=='uk'?$home->title_uk:$home->title_ru?></h1>
                 <?php if (isset($listHome)):?>
                 <ul>
@@ -68,9 +68,27 @@ $this->title='Polish|StudentWay';
                 </ul>
                 <?php endif;?>
             </div>
+            <!-- Mobile devices home-->
+            <div class="col-sm-12 col-xs-12 hidden-md hidden-lg">
+                <div class="mobi__contact text-right">
+                    <p class="mobi__contact_tel"><a href="tel: +380968085774">+38 096 808 57 74</a></p>
+                    <p class="mobi__contact_tel"><a href="tel: +380968085774">+38 096 808 57 74</a></p>
+                    <p class="mobi__contact_address">г. Днепр, пр. Гагарина, 115 оф. 43</p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-xs-12 hidden-md hidden-lg">
+                <div class="mobi__header text-center">
+                    <h1 class="mobi__header_text">Курс "Польский язык для абитуриентов"</h1>
+                </div>
+            </div>
+            <div class="col-sm-12 col-xs-12 hidden-md hidden-lg">
+                <div class="mobi__desc text-center">
+                    <h3 class="mobi__desc_text">Запишись на курс до 30.06 и получи 1 месяц занятий бесплатно! Начало занятий с 10.09.2018</h3>
+                </div>
+            </div>
+            <!-- end Mobile devices home-->
 
-
-            <div class="col-md-4 col-md-offset-1 home-content-text-block">
+            <div class="col-md-4 col-md-offset-1 col-sm-12 col-xs-12 home-content-text-block">
                 <?php $form = ActiveForm::begin(['id'=>'RequestCallMeForm', 'options'=>['class'=>'form']]);?>
                     <p><?=nl2br($loc=='ru'?$formHome['desc_ru']:$formHome['desc_uk'])?></p>
                     <h3><?=nl2br($loc=='ru'?$formHome['header_ru']:$formHome['header_uk'])?></h3>
@@ -98,7 +116,7 @@ $this->title='Polish|StudentWay';
 
 <section id="fh5co-explore" data-section="explore">
 
-    <div class="container">
+    <div class="container hidden-sm hidden-xs">
         <div class="row">
             <div class="col-md-12 section-heading text-center">
                 <h2 class="to-animate"><?=$loc=='uk'?$privilege->main_title_uk:$privilege->main_title_ru?></h2>
@@ -111,7 +129,7 @@ $this->title='Polish|StudentWay';
         </div>
     </div>
 
-    <div class="fh5co-explore">
+    <div class="fh5co-explore hidden-sm hidden-xs">
         <div class="gradient"></div>
         <div class="container">
             <div class="row">
@@ -132,7 +150,7 @@ $this->title='Polish|StudentWay';
         </div>
     </div>
 
-    <div class="fh5co-explore fh5co-explore-bg-color">
+    <div class="fh5co-explore fh5co-explore-bg-color hidden-sm hidden-xs">
         <div class="bg-text">
         <div class="container">
             <div class="col-md-12 section-heading text-center">
@@ -165,6 +183,85 @@ $this->title='Polish|StudentWay';
                 </div>
             </div>
         </div>
+        </div>
+    </div>
+    <!-- Mobile devices explore-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-xs-12 hidden-lg hidden-md">
+                <div class="mobi__explore ">
+                    <div class="mobi__explore_header text-center">
+                        <h2>У нас на курсах</h2>
+                    </div>
+                </div>
+                <ul class="mobi__explore_list">
+                    <li class="mobi__explore_list_item"><i class="icon-check2"></i>Подготовишься к сдаче экзаменов в университет</li>
+                    <li class="mobi__explore_list_item"><i class="icon-check2"></i>Начнешь говорить на польском языке</li>
+                    <li class="mobi__explore_list_item"><i class="icon-check2"></i>Научитесь грамотно читать и писать</li>
+                    <li class="mobi__explore_list_item"><i class="icon-check2"></i>Получишь сертификат о знании польского языка</li>
+                    <li class="mobi__explore_list_item"><i class="icon-check2"></i>Будешь заниматься в уютных классах по современной методике</li>
+                    <li class="mobi__explore_list_item"><i class="icon-check2"></i>Занятия проходят интересно и полезно в кругу единомыщленников</li>
+                </ul>
+                <ul class="mobi__explore_levels">
+                   <li class="mobi__explore_levels_item">
+                       <div class="mobi__explore_levels_item_level">
+                           <p>A1</p>
+                           <p>3 месяца</p>
+                       </div>
+                       <div class="mobi__explore_levels_item_desc">
+                           <p>Начальный уровень</p>
+                       </div>
+                       <div class="mobi__explore_levels_item_info">
+                            <p>Понедельник, Среда</p>
+                            <p>12:00 - 13:30</p>
+                            <p>Начало: 27 октября</p>
+                       </div>
+                       <div class="mobi__explore_levels_item_price">
+                           <p>650</p>
+                           <p>грн/мес</p>
+                       </div>
+                   </li>
+                    <li class="mobi__explore_levels_item">
+                        <div class="mobi__explore_levels_item_level">
+                            <p>A1</p>
+                            <p>3 месяца</p>
+                        </div>
+                        <div class="mobi__explore_levels_item_desc">
+                            <p>Начальный уровень</p>
+                        </div>
+                        <div class="mobi__explore_levels_item_info">
+                            <p>Понедельник, Среда</p>
+                            <p>12:00 - 13:30</p>
+                            <p>Начало: 27 октября</p>
+                        </div>
+                        <div class="mobi__explore_levels_item_price">
+                            <p>650</p>
+                            <p>грн/мес</p>
+                        </div>
+                    </li>
+                    <li class="mobi__explore_levels_item">
+                        <div class="mobi__explore_levels_item_level">
+                            <p>A1</p>
+                            <p>3 месяца</p>
+                        </div>
+                        <div class="mobi__explore_levels_item_desc">
+                            <p>Начальный уровень</p>
+                        </div>
+                        <div class="mobi__explore_levels_item_info">
+                            <p>Понедельник, Среда</p>
+                            <p>12:00 - 13:30</p>
+                            <p>Начало: 27 октября</p>
+                        </div>
+                        <div class="mobi__explore_levels_item_price">
+                            <p>650</p>
+                            <p>грн/мес</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="mobi__explore_button">
+                    Подобрать время занятий
+                </div>
+            </div>
         </div>
     </div>
 </section>

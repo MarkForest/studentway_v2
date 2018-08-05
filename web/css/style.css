@@ -1847,3 +1847,59 @@ h2.mobi__asWellAs_header {
   margin-top: 25px;
   margin-bottom: 15px;
 }
+/*######### Conditions #################*/
+.mobi__conditions_header{
+  color: #000080;
+  margin-top: 20px;
+  font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+  margin-bottom: 15px;
+}
+
+.mobi__conditions_list{
+  list-style: none;
+  padding:0;
+}
+
+.mobi__conditions_list i{
+  margin-right: 10px;
+  color:#0799d2;
+  font-weight: bold;
+}
+.mobi__conditions_list li{
+  font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+  color: #000080;
+}
+
+.mobi__conditions_desc, .mobi__price--item-style{
+  font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+  color: #000080;
+  font-weight: bold;
+  padding:5px;
+  border: 2px solid #0799d2;
+  border-radius: 8px;
+}
+
+.mobi__conditions_button,.mobi__price_button{
+  padding:15px;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  background: #FF8500;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+/*######### Conditions #################*/
+.mobi__price i{
+  /*font-family: "Comic Sans MS", "PT Sans", Arial, serif;*/
+  font-size: 60px;
+  color: #0799d2;
+  font-weight: bold;
+}
+.mobi__price{
+  margin-top: 20px;
+}
+

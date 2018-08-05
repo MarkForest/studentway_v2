@@ -798,6 +798,58 @@ $this->title='Polish|StudentWay';
     </div>
 </section>
 <!-- end Layout for mibile device block asWellAs -->
+<!-- Layout for mobile device block conditions-->
+<section class="mobi__connditions hidden-md hidden-lg">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="mobi__conditions_header text-center">
+                    Приходи к нам и убедись, что у нас классные условия!
+                </h2>
+                <ul class="mobi__conditions_list">
+                    <li><i class="icon-check2"></i>Уровни подготовки: от "0" до "В2"</li>
+                    <li><i class="icon-check2"></i>Группы: 5-7 человек</li>
+                    <li><i class="icon-check2"></i>Занятия в Дневное и Вечернее время</li>
+                    <li><i class="icon-check2"></i>Мультимедийные классы</li>
+                    <li><i class="icon-check2"></i>Раздаточные материалы</li>
+                    <li><i class="icon-check2"></i>Доступ к учебникам по проф предметам</li>
+                    <li><i class="icon-check2"></i>Скидка на поступление в университеты или образовательный тур в Польшу</li>
+                </ul>
+                <div class="mobi__conditions_desc text-center">
+                    Запишись на курс до 30.06.2018 и получи 1 месяц занятий Бесплатно! Начало занятий с 10.09.2018
+                </div>
+                <div class="mobi__conditions_button text-center">
+                    Записаться сейчас
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end Layout for mobile device block conditions-->
+<!-- Layout for mobile device block price-->
+<section class="mobi__price hidden-md hidden-lg">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="mobi__price_main mobi__price--item-style text-center">
+                    Стоимость <br> 650 грн/месяц
+                </div>
+                <div class="text-center"><i class="glyphicon-plus"></i></div>
+                <div class="mobi__price_additionally_one mobi__price--item-style text-center">
+                    БЕСПЛАТНО <br> дополнительные ежедневные занятия в твоем смартфоне
+                </div>
+                <div class="text-center"><i class="glyphicon-plus"></i></div>
+                <div class="mobi__price_additionally_two mobi__price--item-style text-center">
+                    БЕСПЛАТНО <br> 1 месяц занятий, при записи до 30.06.2018
+                </div>
+                <div class="mobi__price_button text-center">
+                    Записаться на бесплатное занятие
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end Layout for mobile device block price-->
 <!-- end Layout for mobile device-->
 
 <?php foreach ($listQuestion as $list):?>

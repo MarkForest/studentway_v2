@@ -113,7 +113,6 @@ $this->title='Polish|StudentWay';
     </div>
     </div>
 </section>
-
 <section id="fh5co-explore" data-section="explore">
     <div class="container hidden-sm hidden-xs">
         <div class="row">

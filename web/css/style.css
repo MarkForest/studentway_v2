@@ -1775,6 +1775,7 @@ a:hover{
   background: #000080;
   margin-top: 25px;
   margin-bottom: 15px;
+  cursor: pointer;
 }
 
 /*######### Additionally #################*/
@@ -1846,6 +1847,7 @@ h2.mobi__asWellAs_header {
   background: #000080;
   margin-top: 25px;
   margin-bottom: 15px;
+  cursor: pointer;
 }
 /*######### Conditions #################*/
 .mobi__conditions_header{
@@ -1890,6 +1892,7 @@ h2.mobi__asWellAs_header {
   background: #000080;
   margin-top: 25px;
   margin-bottom: 15px;
+  cursor: pointer;
 }
 
 /*######### Conditions #################*/

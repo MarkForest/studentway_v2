@@ -27,6 +27,37 @@ $(document).ready(function () {
         return false;
     });
 
+    $('[id="RequestCallMeForm2"]').on('beforeSubmit',function () {
+        alert("sdf");
+        var data= $(this).serialize();
+
+        $('.modal').hide();
+        $('body').removeClass('modal-open');
+        $('div.modal').removeClass('in');
+        $('.modal-backdrop').remove();
+
+        $.ajax({
+            url:'/course-polish/save-request-call-me',
+            type: 'POST',
+            data: data,
+
+            success: function (res) {
+                if(res == true) {
+                    $('.record-success').fadeToggle(1000);
+                    $('.record-success').fadeOut(10000);
+                }
+                else{
+                    $('.record-danger').fadeToggle(1000);
+                    $('.record-danger').fadeOut(20000);
+                }
+            },
+            error:function () {
+                alert('Error')
+            }
+        });
+        return false;
+    });
+
     $('[id="RecordForm"]').on('beforeSubmit',function () {
 
         var data= $(this).serialize();

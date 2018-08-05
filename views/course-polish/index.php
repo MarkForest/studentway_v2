@@ -18,6 +18,7 @@ $this->title='Polish|StudentWay';
                     <li><a href="#" data-nav-section="pricing"><span><?=$loc=='uk'?'Ціни':'Цены'?></span></a></li>
                     <li><a href="#" data-nav-section="team"><span><?=$loc=='uk'?'Команда':'Команда'?></span></a></li>
                     <li><a href="#" data-nav-section="faq"><span><?=$loc=='uk'?'Питання':'Вопросы'?></span></a></li>
+                    <li><a href="#" data-nav-section="contact"><span><?=$loc=='uk'?'Контакти':'Контакты'?></span></a></li>
                     <li class="dropdown drop">
                         <button class="dropdown-toggle " data-toggle="dropdown" type="button" aria-haspopup="true" aria-expanded="true"  href="#"><?=$drop?>
                             <span class="caret"></span></button>
@@ -254,7 +255,7 @@ $this->title='Polish|StudentWay';
                         </div>
                     </li>
                 </ul>
-                <div class="mobi__explore_button">
+                <div class="mobi__explore_button" data-toggle="modal" data-target="#RequestCallMeFormModal">
                     Подобрать время занятий
                 </div>
             </div>
@@ -290,7 +291,7 @@ $this->title='Polish|StudentWay';
                 <h3><?=isset($gettingFirst->disc_uk)?$gettingFirst->disc_uk:$gettingFirst->disc_ru?></h3>
             </div>
             <div class="col-md-4 to-animate-2">
-                <div class="call-to-action text-right" data-toggle="modal" data-target="#recordForm">
+                <div class="call-to-action text-right" data-toggle="modal" data-target="#RequestCallMeFormModal">
                     <a class="sign-up"><?=isset($gettingFirst->button_text_uk)?$gettingFirst->button_text_uk:$gettingFirst->button_text_ru?></a>
                 </div>
             </div>
@@ -352,8 +353,11 @@ $this->title='Polish|StudentWay';
                 <p><?=$getSecond['disc']?></p>
             </div>
             <div class="col-md-3 col-md-offset-2 to-animate-2">
-                <div class="call-to-action text-center">
-                    <button onClick="LIRAX.showWidget()" class="sign-up"><?=$getSecond['buttonText']?></button>
+<!--                <div class="call-to-action text-center">-->
+<!--                    <button onClick="LIRAX.showWidget()" class="sign-up">--><?//=$getSecond['buttonText']?><!--</button>-->
+<!--                </div>-->
+                <div class="call-to-action text-right" data-toggle="modal" data-target="#RequestCallMeFormModal">
+                    <a class="sign-up"><?=$getSecond['buttonText']?></a>
                 </div>
             </div>
         </div>
@@ -385,7 +389,10 @@ $this->title='Polish|StudentWay';
                                 <li><p><i class="icon-check2"></i><?=$loc == 'uk'?$listList->text_uk:$listList->text_ru?></p></li>
 
                                 <?php endforeach;?>
-                                <button onClick="LIRAX.showWidget()" class="btn btn-select-plan btn-sm"><?=$loc == 'uk'?'Записатися':'Записаться'?></button>
+                                <div class="call-to-action text-right" data-toggle="modal" data-target="#RequestCallMeFormModal">
+                                    <a class="sign-up btn btn-select-plan btn-sm"><?=$loc == 'uk'?'Записатися':'Записаться'?></a>
+                                </div>
+<!--                                <button onClick="LIRAX.showWidget()" class="btn btn-select-plan btn-sm">--><?//=$loc == 'uk'?'Записатися':'Записаться'?><!--</button>-->
                             </ul>
                         </div>
                     </div>
@@ -558,7 +565,8 @@ $this->title='Polish|StudentWay';
             <div class="col-md-8 to-animate">
                 <h3><?=$loc=='uk'?$gettingFifth->title_uk:$gettingFifth->title_ru?></h3>
             </div>
-            <div class="col-md-4 to-animate-2" data-toggle="modal" data-target="#askQuestionForm">
+
+            <div class="col-md-4 to-animate-2" data-toggle="modal" data-target="#RequestCallMeFormModal">
                 <div class="call-to-action text-right">
                     <a class="sign-up"><?=$loc=='uk'?$gettingFifth->button_text_uk:$gettingFifth->button_text_ru?></a>
                 </div>
@@ -717,7 +725,7 @@ $this->title='Polish|StudentWay';
         </div>
     </div>
 </section>
-<div id="fh5co-footer" role="contentinfo" class="hidden-sm hidden-xs">
+<div id="fh5co-footer" data-section="contact" role="contentinfo" class="hidden-sm hidden-xs">
     <div class="container">
         <div class="row">
             <div class="col-md-3 to-animate">
@@ -731,9 +739,9 @@ $this->title='Polish|StudentWay';
                 <h3 class="section-title"><?=$loc=='uk'?$footer->address_title_uk:$footer->address_title_ru?></h3>
                 <ul class="contact-info">
                     <li><i class="icon-map-marker"></i><?=$loc=='uk'?$footer->address_text_uk:$footer->address_text_ru?></li>
-                    <li><i class="icon-phone"></i><?=$footer->phone_number?></li>
-                    <li><i class="icon-envelope"></i><a href="#"><?=$footer->email?></a></li>
-                    <li><i class="icon-globe2"></i><a href="#"><?=$footer->site?></a></li>
+                    <li><i class="icon-phone"></i><a href="tel:<?=$footer->phone_number?>"><?=$footer->phone_number?></a></li>
+                    <li><i class="icon-envelope"></i><a href="mailto:<?=$footer->email?>"><?=$footer->email?></a></li>
+                    <li><i class="icon-globe2"></i><a href="<?=$footer->site?>"><?=$footer->site?></a></li>
                 </ul>
             </div>
 
@@ -790,7 +798,7 @@ $this->title='Polish|StudentWay';
                 <p class="mobi__asWellAss_content">
                     Это СБОРНИК Рекомендаций, ЛайфХаков и просто супер Советов, которые помогут адаптироваться а также интересно и легко жить и учиться в Польше каждому первокурснику.
                 </p>
-                <div class="mobi__asWellAs_button_two text-center">
+                <div class="mobi__asWellAs_button_two text-center" data-toggle="modal" data-target="#RequestCallMeFormModal">
                     Получить книгу в ПОДАРОК вам будет выслан экземпляр на электронную почту
                 </div>
             </div>
@@ -818,7 +826,7 @@ $this->title='Polish|StudentWay';
                 <div class="mobi__conditions_desc text-center">
                     Запишись на курс до 30.06.2018 и получи 1 месяц занятий Бесплатно! Начало занятий с 10.09.2018
                 </div>
-                <div class="mobi__conditions_button text-center">
+                <div class="mobi__conditions_button text-center" data-toggle="modal" data-target="#RequestCallMeFormModal">
                     Записаться сейчас
                 </div>
             </div>
@@ -842,7 +850,7 @@ $this->title='Polish|StudentWay';
                 <div class="mobi__price_additionally_two mobi__price--item-style text-center">
                     БЕСПЛАТНО <br> 1 месяц занятий, при записи до 30.06.2018
                 </div>
-                <div class="mobi__price_button text-center">
+                <div class="mobi__price_button text-center" data-toggle="modal" data-target="#RequestCallMeFormModal">
                     Записаться на бесплатное занятие
                 </div>
             </div>
@@ -896,22 +904,49 @@ $this->title='Polish|StudentWay';
         </div>
     </div>
 </div>
-<div class="modal fade" id="askQuestionForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="recordForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h3 class="modal-title" id="myModalLabel"><?=$loc=='ru'?'Задать вопрос.':'Задати питання'?></h3>
+                <h3 class="modal-title" id="myModalLabel"><?=$loc=='ru'?'Записать на субботу.':'Записати на суботу.'?></h3>
             </div>
-            <?php $form = ActiveForm::begin(['id'=>'AskQuestionForm',]);?>
+            <?php $form = ActiveForm::begin(['id'=>'RecordForm']);?>
             <div class="modal-body">
-                <?=$form->field($modelAsk,'name')->textInput()->label($loc=='uk'?'Ім\'я':'Имя');?>
-                <?=$form->field($modelAsk,'email')->textInput()->label();?>
-                <?=$form->field($modelAsk,'message')->textarea()->label($loc=='uk'?'Питання':'Вопрос');?>
+                <?=$form->field($model,'name')->textInput()->label($loc=='uk'?'Ім\'я':'Имя');?>
+                <?=$form->field($model,'phoneNumber')->textInput()->label();?>
+                <?=$form->field($model,'email')->textInput()->label();?>
             </div>
             <div class="modal-footer">
                 <button type="button" class="call-to-action" data-dismiss="modal"><?=$loc=='uk'?'Відміна':'Отмена'?></button>
-                <?= Html::submitButton($loc=='ru'?'Отправить':'Відправити',['class'=>'call-to-action'])?>
+                <?= Html::submitButton($loc=='ru'?'Записаться':'Записатися',['class'=>'call-to-action'])?>
+            </div>
+            <?php ActiveForm::end();?>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="RequestCallMeFormModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabeMain" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <p><?=nl2br($loc=='ru'?$formHome['desc_ru']:$formHome['desc_uk'])?></p>
+                <h3><?=nl2br($loc=='ru'?$formHome['header_ru']:$formHome['header_uk'])?></h3>
+            </div>
+            <?php $form = ActiveForm::begin(['id'=>'RequestCallMeForm2', 'options'=>['class'=>'form']]);?>
+            <div class="modal-body">
+                <?= $form->field($modelRequestCallMe, 'region_key')
+                    ->textInput(['class'=>'hidden', 'value'=>$reg])->label(false);?>
+                <?= $form->field($modelRequestCallMe, 'fullname')
+                    ->textInput(['class'=>'form-control','placeholder'=>nl2br($loc=='ru'?$formHome['name_placeholder_ru']:$formHome['name_placeholder_uk']), 'id'=>'fullname'])
+                    ->label(false);?>
+                <?= $form->field($modelRequestCallMe, 'tall_number')
+                    ->textInput(['class'=>'form-control','placeholder'=>nl2br($loc=='ru'?$formHome['tell_placeholder_ru']:$formHome['tell_placeholder_uk']), 'id'=>'phoneNumber2'])
+                    ->label(false);?>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="call-to-action" data-dismiss="modal"><?=$loc=='uk'?'Відміна':'Отмена'?></button>
+                <?= Html::submitButton(nl2br($loc=='ru'?$formHome['button_text_ru']:$formHome['button_text_uk']),['class'=>'call-to-action'])?>
             </div>
             <?php ActiveForm::end();?>
         </div>

@@ -46,7 +46,6 @@ $this->title='Polish|StudentWay';
         </nav>
     </div>
 </header>
-
 <section id="fh5co-home" data-section="home">
     <div class="gradient"></div>
     <div class="container">
@@ -115,7 +114,6 @@ $this->title='Polish|StudentWay';
 </section>
 
 <section id="fh5co-explore" data-section="explore">
-
     <div class="container hidden-sm hidden-xs">
         <div class="row">
             <div class="col-md-12 section-heading text-center">
@@ -128,7 +126,6 @@ $this->title='Polish|StudentWay';
             </div>
         </div>
     </div>
-
     <div class="fh5co-explore hidden-sm hidden-xs">
         <div class="gradient"></div>
         <div class="container">
@@ -149,7 +146,6 @@ $this->title='Polish|StudentWay';
             </div>
         </div>
     </div>
-
     <div class="fh5co-explore fh5co-explore-bg-color hidden-sm hidden-xs">
         <div class="bg-text">
         <div class="container">
@@ -287,7 +283,7 @@ $this->title='Polish|StudentWay';
     </div>
     <!-- end Mobile devices Additionally-->
 </section>
-<div class="getting-started getting-started-1">
+<div class="getting-started getting-started-1 hidden-sm hidden-xs">
     <div class="container">
         <div class="row">
             <div class="col-md-8 to-animate">
@@ -301,9 +297,7 @@ $this->title='Polish|StudentWay';
         </div>
     </div>
 </div>
-
-
-<section id="fh5co-testimony" data-section="testimony">
+<section id="fh5co-testimony" data-section="testimony" class="hidden-sm hidden-xs">
     <div class="container">
         <div class="row">
             <div class="col-md-12 to-animate">
@@ -347,9 +341,8 @@ $this->title='Polish|StudentWay';
             </div>
         </div>
     </div>
-</section>
-
-<div class="getting-started getting-started-1 block-with-clock">
+</section class->
+<div class="getting-started getting-started-1 block-with-clock hidden-sm hidden-xs">
     <div class="container">
         <div class="row">
             <div class="col-md-7 to-animate">
@@ -366,8 +359,7 @@ $this->title='Polish|StudentWay';
         </div>
     </div>
 </div>
-
-<section id="fh5co-pricing" data-section="pricing">
+<section id="fh5co-pricing" data-section="pricing" class="hidden-sm hidden-xs">
     <div class="fh5co-pricing">
         <div class="container">
             <div class="row">
@@ -404,7 +396,7 @@ $this->title='Polish|StudentWay';
         </div>
     </div>
 </section>
-<div class="getting-started getting-started-2">
+<div class="getting-started getting-started-2 hidden-sm hidden-xs">
     <div class="container">
         <div class="row">
             <div class="to-animate">
@@ -428,7 +420,7 @@ $this->title='Polish|StudentWay';
         </div>
     </div>
 </div>
-<section id="fh5co-services" data-section="services" class="hidden-xs">
+<section id="fh5co-services" data-section="services" class="hidden-sm hidden-xs">
     <div class="fh5co-services">
         <div class="container">
             <div class="row">
@@ -457,7 +449,7 @@ $this->title='Polish|StudentWay';
         </div>
     </div>
 </section>
-<div class="getting-started getting-started-1">
+<div class="getting-started getting-started-1 hidden-sm hidden-xs">
     <div class="container">
         <div class="row">
             <div class="col-md-8 to-animate">
@@ -472,7 +464,7 @@ $this->title='Polish|StudentWay';
         </div>
     </div>
 </div>
-<section id="fh5co-team" data-section="team">
+<section id="fh5co-team" data-section="team" class="hidden-sm hidden-xs">
     <div class="fh5co-team">
         <div class="container">
             <div class="row">
@@ -500,7 +492,7 @@ $this->title='Polish|StudentWay';
         </div>
     </div>
 </section>
-<section id="galery">
+<section id="galery" class="hidden-xs hidden-sm">
     <div class="container">
         <div class="row">
             <div class="col-md-12 section-heading text-center">
@@ -529,7 +521,7 @@ $this->title='Polish|StudentWay';
 
     </div>
 </section>
-<section id="fh5co-faq" data-section="faq" class="hidden-xs">
+<section id="fh5co-faq" data-section="faq" class="hidden-sm hidden-xs">
     <div class="fh5co-faq">
         <div class="container">
             <div class="row">
@@ -560,8 +552,7 @@ $this->title='Polish|StudentWay';
         </div>
     </div>
 </section>
-
-<div class="getting-started getting-started-1">
+<div class="getting-started getting-started-1 hidden-sm hidden-xs">
     <div class="container">
         <div class="row">
             <div class="col-md-8 to-animate">
@@ -575,7 +566,6 @@ $this->title='Polish|StudentWay';
         </div>
     </div>
 </div>
-
 <section id="fh5co-trusted" data-section="trusted" class="hidden-xs hidden-sm hidden-lg hidden-md">
     <div class="fh5co-trusted">
         <div class="container">
@@ -727,8 +717,7 @@ $this->title='Polish|StudentWay';
         </div>
     </div>
 </section>
-
-<div id="fh5co-footer" role="contentinfo">
+<div id="fh5co-footer" role="contentinfo" class="hidden-sm hidden-xs">
     <div class="container">
         <div class="row">
             <div class="col-md-3 to-animate">
@@ -783,8 +772,33 @@ $this->title='Polish|StudentWay';
         </div>
     </div>
 </div>
-
-<div class>
+<!-- Layout for mobile device-->
+<!-- Layout for mibile device block asWellAs -->
+<section class="mobi__asWellAs hidden-lg hidden-md">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="mobi__asWellAs_header text-center">
+                    А так же
+                </h2>
+                <p class="mobi__asWellAs_desc text-center">
+                    Для всех, кто решил стать<br> Польским студентом - ПОДАКОК!
+                </p>
+                <div class="mobi__asWellAs_button_one text-center">
+                    "100 советов Украинскому студенту в Польше"
+                </div>
+                <p class="mobi__asWellAss_content">
+                    Это СБОРНИК Рекомендаций, ЛайфХаков и просто супер Советов, которые помогут адаптироваться а также интересно и легко жить и учиться в Польше каждому первокурснику.
+                </p>
+                <div class="mobi__asWellAs_button_two text-center">
+                    Получить книгу в ПОДАРОК вам будет выслан экземпляр на электронную почту
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end Layout for mibile device block asWellAs -->
+<!-- end Layout for mobile device-->
 
 <?php foreach ($listQuestion as $list):?>
 <div class="modal fade" id="<?=$list->id?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -807,8 +821,6 @@ $this->title='Polish|StudentWay';
     </div>
 </div>
 <?php endforeach;?>
-
-
 
 <!-- Modal -->
 <div class="modal fade" id="recordForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -853,19 +865,16 @@ $this->title='Polish|StudentWay';
         </div>
     </div>
 </div>
-
+<!-- Alerts -->
 <div class="alert alert-success record-success">
     <?=$loc=='uk'?'Ви успішно записалися':'Запись прошла успешно'?>
 </div>
-
 <div class="alert alert-danger record-danger">
     <?=$loc=='uk'?'Ви вже записан.і':'Не вышло! Вы уже записались.'?>
 </div>
-
 <div class="alert alert-success ask-success">
     <?=$loc=='uk'?'Питання відправлено.':'Вопрос отпрален.'?>
 </div>
-
 <div class="alert alert-danger ask-danger">
     <?=$loc=='uk'?'Питання не відправлено!':'Вопрос не отправлен.'?>
 </div>

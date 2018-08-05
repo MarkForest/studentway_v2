@@ -1805,3 +1805,45 @@ a:hover{
   font-family: "Comic Sans MS", "PT Sans", Arial, serif;
   color:#000;
 }
+
+/*######### As Well as #################*/
+.mobi__asWellAs{
+  background: #a8e4ff;
+  color: #000080;
+}
+h2.mobi__asWellAs_header {
+  color: #000080;
+  margin-top: 20px;
+  font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+.mobi__asWellAs_desc, .mobi__asWellAss_content{
+    color: #000080;
+    font-size: 23px;
+    font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+    margin-bottom: 20px;
+}
+
+.mobi__asWellAs_button_one{
+  background: #fff;
+  color: #000080;
+  border-radius: 8px;
+  font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+.mobi__asWellAs_button_two{
+  padding:15px;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  background: #FF8500;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}

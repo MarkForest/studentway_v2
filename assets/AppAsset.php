@@ -35,7 +35,6 @@ public $js = [
 
     'https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js',
     'js/bootstrap.min.js',
-
     'js/modernizr-2.6.2.min.js',
     'js/jquery.easing.1.3.js',
     'js/jquery.waypoints.min.js',

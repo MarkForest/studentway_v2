@@ -46,19 +46,18 @@ AppAsset::register($this);
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="shortcut icon" href="<?php echo Yii::$app->request->baseUrl; ?>/favicon.ico" type="image/x-icon" />
     <?php $this->head() ?>
-	<script type='text/javascript'>
-(function() {
-var widgetId = '9de602a1891984e20d4638f841369d9e';
-var s = document.createElement('script');
-s.type = 'text/javascript';
-s.charset = 'utf-8';
-s.async = true;
-s.src = '//callme.voip.com.ua/script/widget/'+widgetId;
-var ss = document.getElementsByTagName('script')[0];
-ss.parentNode.insertBefore(s, ss);}
-)();
-
-</script>
+<!--	<script type='text/javascript'>-->
+<!--        (function() {-->
+<!--        var widgetId = '9de602a1891984e20d4638f841369d9e';-->
+<!--        var s = document.createElement('script');-->
+<!--        s.type = 'text/javascript';-->
+<!--        s.charset = 'utf-8';-->
+<!--        s.async = true;-->
+<!--        s.src = '//callme.voip.com.ua/script/widget/'+widgetId;-->
+<!--        var ss = document.getElementsByTagName('script')[0];-->
+<!--        ss.parentNode.insertBefore(s, ss);}-->
+<!--        )();-->
+<!--    </script>-->
 
 	<!-- Facebook Pixel Code -->
 <script>

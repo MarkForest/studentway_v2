@@ -1777,3 +1777,31 @@ a:hover{
   margin-bottom: 15px;
 }
 
+/*######### Additionally #################*/
+#fh5co-explore .mobi__additionally_header h2{
+  font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+  color:#000;
+  margin-top:20px;
+}
+
+#fh5co-explore .mobi__additionally_desc_list i{
+  margin-right: 10px;
+  color:#0799d2;
+  font-weight: bold;
+}
+#fh5co-explore .mobi__additionally_desc p{
+  font-size: 20px;
+  color:#000;
+  margin-bottom: 10px;
+  font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+}
+
+
+#fh5co-explore .mobi__additionally_desc_list{
+  list-style: none;
+  padding:0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+  color:#000;
+}

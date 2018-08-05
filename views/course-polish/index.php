@@ -264,6 +264,28 @@ $this->title='Polish|StudentWay';
             </div>
         </div>
     </div>
+    <!-- end Mobile devices explore-->
+    <!-- Mobile devices Additionally-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-xs-12 hidden-md hidden-lg">
+                <div class="mobi__additionally_header text-center">
+                    <h2>Дополнительно</h2>
+                </div>
+                <div class="mobi__additionally_desc">
+                    <p>Наши ученики получают доступ к учебникам на польском языке:</p>
+                    <ul class="mobi__additionally_desc_list">
+                        <li><i class="icon-check2"></i>по математике;</li>
+                        <li><i class="icon-check2"></i>по физике;</li>
+                        <li><i class="icon-check2"></i>по химии;</li>
+                        <li><i class="icon-check2"></i>по экономике;</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- end Mobile devices Additionally-->
 </section>
 <div class="getting-started getting-started-1">
     <div class="container">

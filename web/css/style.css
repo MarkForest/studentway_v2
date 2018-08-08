@@ -1929,6 +1929,10 @@ h2.mobi__asWellAs_header {
   border-radius: 8px;
 }
 
-
-
-
+/*######### admin mobi home #################*/
+.mobi__home--admin, .mobi__explore--admin{
+  margin-top: 100px;
+}
+.mobi__home--admin img, .mobi__explore--admin img{
+  box-shadow: 0px 0px 70px rgba(255, 0, 0, 0.5);
+}

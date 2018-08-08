@@ -1,5 +1,5 @@
 /* globals TetherBase, performance */
-
+// use strict
 if (typeof TetherBase === 'undefined') {
   throw new Error('You must include the utils.js file before tether.js');
 }
@@ -21,8 +21,9 @@ const {
 function within(a, b, diff=1) {
   return (a + diff >= b && b >= a - diff);
 }
-
 const transformKey = (() => {
+
+
   if(typeof document === 'undefined') {
     return '';
   }
@@ -176,7 +177,6 @@ const parseOffset = (value) => {
 const parseAttachment = parseOffset;
 
 class TetherClass extends Evented {
-
   constructor(options) {
     super();
     this.position = this.position.bind(this);
@@ -571,7 +571,7 @@ class TetherClass extends Evented {
         right: pageXOffset - left - width + innerWidth
       }
     };
-    
+
     var doc = this.target.ownerDocument;
     var win = doc.defaultView;
 

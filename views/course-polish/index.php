@@ -71,23 +71,22 @@ $this->title='Polish|StudentWay';
             <!-- Mobile devices home-->
             <div class="col-sm-12 col-xs-12 hidden-md hidden-lg">
                 <div class="mobi__contact text-right">
-                    <p class="mobi__contact_tel"><a href="tel: +380968085774">+38 096 808 57 74</a></p>
-                    <p class="mobi__contact_tel"><a href="tel: +380968085774">+38 096 808 57 74</a></p>
-                    <p class="mobi__contact_address">г. Днепр, пр. Гагарина, 115 оф. 43</p>
+                <p class="mobi__contact_tel"><a href="tel: <?=nl2br($mobiHome['contact_one'])?>"><?=nl2br($mobiHome['contact_one'])?></a></p>
+                    <p class="mobi__contact_tel"><a href="tel: <?=nl2br($mobiHome['contact_two'])?>"><?=nl2br($mobiHome['contact_two'])?></a></p>
+                    <p class="mobi__contact_address"><?=nl2br($loc=='ru'?$mobiHome['address_ru']:$mobiHome['address_uk'])?></p>
                 </div>
             </div>
             <div class="col-sm-12 col-xs-12 hidden-md hidden-lg">
                 <div class="mobi__header text-center">
-                    <h1 class="mobi__header_text">Курс "Польский язык для абитуриентов"</h1>
+                    <h1 class="mobi__header_text"><?=nl2br($loc=='ru'?$mobiHome['header_ru']:$mobiHome['header_uk'])?></h1>
                 </div>
             </div>
             <div class="col-sm-12 col-xs-12 hidden-md hidden-lg">
                 <div class="mobi__desc text-center">
-                    <h3 class="mobi__desc_text">Запишись на курс до 30.06 и получи 1 месяц занятий бесплатно! Начало занятий с 10.09.2018</h3>
+                    <h3 class="mobi__desc_text"><?=nl2br($loc=='ru'?$mobiHome['desc_ru']:$mobiHome['desc_uk'])?></h3>
                 </div>
             </div>
             <!-- end Mobile devices home-->
-
             <div class="col-md-4 col-md-offset-1 col-sm-12 col-xs-12 home-content-text-block">
                 <?php $form = ActiveForm::begin(['id'=>'RequestCallMeForm', 'options'=>['class'=>'form']]);?>
                     <p><?=nl2br($loc=='ru'?$formHome['desc_ru']:$formHome['desc_uk'])?></p>
@@ -98,6 +97,7 @@ $this->title='Polish|StudentWay';
                         <?= $form->field($modelRequestCallMe, 'fullname')
                             ->textInput(['class'=>'form-control','placeholder'=>nl2br($loc=='ru'?$formHome['name_placeholder_ru']:$formHome['name_placeholder_uk']), 'id'=>'fullname'])
                             ->label(false);?>
+
 <!--                        <input type="text" class="form-control" placeholder="--><?//=nl2br($loc=='ru'?$formHome['name_placeholder_ru']:$formHome['name_placeholder_uk'])?><!--" id="fullname">-->
                         <?= $form->field($modelRequestCallMe, 'tall_number')
                             ->textInput(['class'=>'form-control','placeholder'=>nl2br($loc=='ru'?$formHome['tell_placeholder_ru']:$formHome['tell_placeholder_uk']), 'id'=>'phoneNumber'])
@@ -122,7 +122,7 @@ $this->title='Polish|StudentWay';
                     <div class="col-md-8 col-md-offset-2 subtext to-animate">
                         <h3><?=$loc=='uk'?$privilege->disc_uk:$privilege->disc_ru?></h3>
                     </div>
-                </div>
+                </div>f
             </div>
         </div>
     </div>
@@ -187,75 +187,38 @@ $this->title='Polish|StudentWay';
             <div class="col-sm-12 col-xs-12 hidden-lg hidden-md">
                 <div class="mobi__explore ">
                     <div class="mobi__explore_header text-center">
-                        <h2>У нас на курсах</h2>
+                        <h2><?=nl2br($loc=='ru'?$mobiExplore['header_ru']:$mobiExplore['header_uk'])?></h2>
                     </div>
                 </div>
                 <ul class="mobi__explore_list">
-                    <li class="mobi__explore_list_item"><i class="icon-check2"></i>Подготовишься к сдаче экзаменов в университет</li>
-                    <li class="mobi__explore_list_item"><i class="icon-check2"></i>Начнешь говорить на польском языке</li>
-                    <li class="mobi__explore_list_item"><i class="icon-check2"></i>Научитесь грамотно читать и писать</li>
-                    <li class="mobi__explore_list_item"><i class="icon-check2"></i>Получишь сертификат о знании польского языка</li>
-                    <li class="mobi__explore_list_item"><i class="icon-check2"></i>Будешь заниматься в уютных классах по современной методике</li>
-                    <li class="mobi__explore_list_item"><i class="icon-check2"></i>Занятия проходят интересно и полезно в кругу единомыщленников</li>
+                  <?php foreach ($mobiExploreLists as $key => $value):?>
+                    <li class="mobi__explore_list_item"><i class="icon-check2"></i>
+                      <?=nl2br($loc=='ru'?$value['content_ru']:$value['content_uk'])?>
+                    </li>
+                  <?php endforeach;?>
                 </ul>
                 <ul class="mobi__explore_levels">
-                   <li class="mobi__explore_levels_item">
-                       <div class="mobi__explore_levels_item_level">
-                           <p>A1</p>
-                           <p>3 месяца</p>
-                       </div>
-                       <div class="mobi__explore_levels_item_desc">
-                           <p>Начальный уровень</p>
-                       </div>
-                       <div class="mobi__explore_levels_item_info">
-                            <p>Понедельник, Среда</p>
-                            <p>12:00 - 13:30</p>
-                            <p>Начало: 27 октября</p>
-                       </div>
-                       <div class="mobi__explore_levels_item_price">
-                           <p>650</p>
-                           <p>грн/мес</p>
-                       </div>
-                   </li>
+                  <<?php foreach ($mobiExploreLevels as $key => $value): ?>
                     <li class="mobi__explore_levels_item">
                         <div class="mobi__explore_levels_item_level">
-                            <p>A1</p>
-                            <p>3 месяца</p>
+                            <p><?=nl2br($value['level'])?></p>
+                            <p><?=nl2br($loc=='ru'?$value['period_ru']:$value['period_uk'])?></p>
                         </div>
                         <div class="mobi__explore_levels_item_desc">
-                            <p>Начальный уровень</p>
+                            <p><?=nl2br($loc=='ru'?$value['desc_ru']:$value['desc_uk'])?></p>
                         </div>
                         <div class="mobi__explore_levels_item_info">
-                            <p>Понедельник, Среда</p>
-                            <p>12:00 - 13:30</p>
-                            <p>Начало: 27 октября</p>
+                             <p><?=nl2br($loc=='ru'?$value['info_ru']:$value['info_uk'])?></p>
                         </div>
                         <div class="mobi__explore_levels_item_price">
-                            <p>650</p>
-                            <p>грн/мес</p>
+                            <p><?=nl2br($value['price'])?></p>
+                            <p><?=nl2br($loc=='ru'?$value['price_period_ru']:$value['price_period_uk'])?></p>
                         </div>
                     </li>
-                    <li class="mobi__explore_levels_item">
-                        <div class="mobi__explore_levels_item_level">
-                            <p>A1</p>
-                            <p>3 месяца</p>
-                        </div>
-                        <div class="mobi__explore_levels_item_desc">
-                            <p>Начальный уровень</p>
-                        </div>
-                        <div class="mobi__explore_levels_item_info">
-                            <p>Понедельник, Среда</p>
-                            <p>12:00 - 13:30</p>
-                            <p>Начало: 27 октября</p>
-                        </div>
-                        <div class="mobi__explore_levels_item_price">
-                            <p>650</p>
-                            <p>грн/мес</p>
-                        </div>
-                    </li>
+                  <?php endforeach; ?>
                 </ul>
                 <div class="mobi__explore_button" data-toggle="modal" data-target="#RequestCallMeFormModal">
-                    Подобрать время занятий
+                    <?=nl2br($loc=='ru'?$mobiExplore['button_ru']:$mobiExplore['button_uk'])?>
                 </div>
             </div>
         </div>
@@ -297,6 +260,7 @@ $this->title='Polish|StudentWay';
         </div>
     </div>
 </div>
+
 <section id="fh5co-testimony" data-section="testimony" class="hidden-sm hidden-xs">
     <div class="container">
         <div class="row">
@@ -786,19 +750,19 @@ $this->title='Polish|StudentWay';
         <div class="row">
             <div class="col-xs-12">
                 <h2 class="mobi__asWellAs_header text-center">
-                    А так же
+                    <?=nl2br($loc=='ru'?$mobiAsWellAs['header_ru']:$mobiAsWellAs['header_uk'])?>
                 </h2>
                 <p class="mobi__asWellAs_desc text-center">
-                    Для всех, кто решил стать<br> Польским студентом - ПОДАКОК!
+                    <?=nl2br($loc=='ru'?$mobiAsWellAs['desc_ru']:$mobiAsWellAs['desc_uk']);?>
                 </p>
                 <div class="mobi__asWellAs_button_one text-center">
-                    "100 советов Украинскому студенту в Польше"
+                    <?=nl2br($loc=='ru'?$moboAsWellAs['button_one_ru']:$mobiAsWellAs['button_one_uk'])?>
                 </div>
                 <p class="mobi__asWellAss_content">
-                    Это СБОРНИК Рекомендаций, ЛайфХаков и просто супер Советов, которые помогут адаптироваться а также интересно и легко жить и учиться в Польше каждому первокурснику.
+                  <?=nl2br($loc=='ru'?$moboAsWellAs['content_ru']:$mobiAsWellAs['content_uk'])?>
                 </p>
                 <div class="mobi__asWellAs_button_two text-center" data-toggle="modal" data-target="#RequestCallMeFormModal">
-                    Получить книгу в ПОДАРОК вам будет выслан экземпляр на электронную почту
+                  <?=nl2br($loc=='ru'?$moboAsWellAs['button_two_ru']:$mobiAsWellAs['button_two_uk'])?>
                 </div>
             </div>
         </div>
@@ -811,22 +775,20 @@ $this->title='Polish|StudentWay';
         <div class="row">
             <div class="col-xs-12">
                 <h2 class="mobi__conditions_header text-center">
-                    Приходи к нам и убедись, что у нас классные условия!
+                    <?=nl2br($loc=='ru'?$mobiConditions['header_ru']:$mobiConditions['header_uk']);?>
                 </h2>
                 <ul class="mobi__conditions_list">
-                    <li><i class="icon-check2"></i>Уровни подготовки: от "0" до "В2"</li>
-                    <li><i class="icon-check2"></i>Группы: 5-7 человек</li>
-                    <li><i class="icon-check2"></i>Занятия в Дневное и Вечернее время</li>
-                    <li><i class="icon-check2"></i>Мультимедийные классы</li>
-                    <li><i class="icon-check2"></i>Раздаточные материалы</li>
-                    <li><i class="icon-check2"></i>Доступ к учебникам по проф предметам</li>
-                    <li><i class="icon-check2"></i>Скидка на поступление в университеты или образовательный тур в Польшу</li>
+                  <?php foreach ($mobiConditionsLists as $key => $value): ?>
+                    <li><i class="icon-check2"></i>
+                      <?=nl2br($loc=='ru'?$value['content_ru']:$value['content_uk']);?>
+                    </li>
+                  <?php endforeach; ?>
                 </ul>
                 <div class="mobi__conditions_desc text-center">
-                    Запишись на курс до 30.06.2018 и получи 1 месяц занятий Бесплатно! Начало занятий с 10.09.2018
+                  <?=nl2br($loc=='ru'?$mobiConditions['desc_ru']:$mobiConditions['desc_uk']);?>
                 </div>
                 <div class="mobi__conditions_button text-center" data-toggle="modal" data-target="#RequestCallMeFormModal">
-                    Записаться сейчас
+                  <?=nl2br($loc=='ru'?$mobiConditions['button_ru']:$mobiConditions['button_uk']);?>
                 </div>
             </div>
         </div>
@@ -839,18 +801,18 @@ $this->title='Polish|StudentWay';
         <div class="row">
             <div class="col-xs-12">
                 <div class="mobi__price_main mobi__price--item-style text-center">
-                    Стоимость <br> 650 грн/месяц
+                    <?=nl2br($loc=='ru'?$mobiPrice['header_ru']:$mobiPrice['header_uk']);?>
                 </div>
                 <div class="text-center"><i class="glyphicon-plus"></i></div>
                 <div class="mobi__price_additionally_one mobi__price--item-style text-center">
-                    БЕСПЛАТНО <br> дополнительные ежедневные занятия в твоем смартфоне
+                  <?=nl2br($loc=='ru'?$mobiPrice['desc_one_ru']:$mobiPrice['desc_one_uk']);?>
                 </div>
                 <div class="text-center"><i class="glyphicon-plus"></i></div>
                 <div class="mobi__price_additionally_two mobi__price--item-style text-center">
-                    БЕСПЛАТНО <br> 1 месяц занятий, при записи до 30.06.2018
+                  <?=nl2br($loc=='ru'?$mobiPrice['desc_two_ru']:$mobiPrice['desc_two_uk']);?>
                 </div>
                 <div class="mobi__price_button text-center" data-toggle="modal" data-target="#RequestCallMeFormModal">
-                    Записаться на бесплатное занятие
+                  <?=nl2br($loc=='ru'?$mobiPrice['button_ru']:$mobiPrice['button_uk']);?>
                 </div>
             </div>
         </div>

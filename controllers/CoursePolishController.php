@@ -33,6 +33,14 @@ use app\models\RecordsForm;
 use app\models\Services;
 use app\models\Tariffs;
 use app\models\Team;
+use app\models\MobiHome;
+use app\models\MobiExplore;
+use app\models\MobiExploreList;
+use app\models\MobiExploreLevels;
+use app\models\MobiAsWellAs;
+use app\models\MobiConditons;
+use app\models\MobiConditonsList;
+use app\models\MobiPrice;
 use app\models\RequestCallMeForm;
 use Yii;
 use yii\web\AssetBundle;
@@ -124,7 +132,6 @@ class CoursePolishController extends Controller
                 'buttonText'=>$gettingSecond->button_text_ru,
             ];
 
-
         //Тарифы
 
         $tariffs = Tariffs::findOne(['region_key'=>$reg]);
@@ -137,13 +144,11 @@ class CoursePolishController extends Controller
 
 
         //Третий Синий блок
-
         $gettingThird = GettingThird::findOne(['region_key'=>$reg]);
         $listGettingThird = ListGettingThird::find()->where(['getting_third_id'=>$gettingThird->id])->all();
 
 
         //Сервисы
-
         $services = Services::findOne(['region_key'=>$reg]);
         $listServices = ListServices::find()->where(['services_id'=>$services->id])->all();
 
@@ -160,7 +165,6 @@ class CoursePolishController extends Controller
         $gallery = Gallery::find()->where(['region_key'=>$reg])->all();
 
         //Вопросы, ответы
-
         $question = Question::findOne(['region_key'=>$reg]);
         $listQuestion = ListQuestion::find()->where(['question_id'=>$question->id])->all();
         $lisListQuestion = [];
@@ -186,6 +190,22 @@ class CoursePolishController extends Controller
             return ($model->validate() && $model->addRecord());
         }
 
+        //MobiHome
+        $mobiHome = MobiHome::findOne(['region_key'=>$reg]);
+        //MobiExplore
+        $mobiExplore = MobiExplore::findOne(['region_key'=>$reg]);
+        $mobiExploreLists = MobiExploreList::find()->where(['MobiExplore_id'=>$mobiExplore['id']])->all();
+        $mobiExploreLevels = MobiExploreLevels::find()->where(['MobiExplore_id'=>$mobiExplore['id']])->all();
+
+        //mobiAsWellAs
+        $mobiAsWellAs = MobiAsWellAs::findOne(['region_key'=>$reg]);
+
+        //mobiConditions
+        $mobiConditions = MobiConditons::findOne(['region_key'=>$reg]);
+        $mobiConditionsLists = MobiConditonsList::find()->where(['MobiConditions_id'=>$mobiConditions['id']])->all();
+
+        //MobiPrice
+        $mobiPrice = MobiPrice::findOne(['region_key'=>$reg]);
 
         return $this->render('index',[
 
@@ -222,6 +242,15 @@ class CoursePolishController extends Controller
             'model'=>$model,
             'modelAsk'=>$modelAsk,
             'modelRequestCallMe'=>$modelRequestCallMe,
+            'mobiHome'=>$mobiHome,
+            'mobiExplore'=>$mobiExplore,
+            'mobiExploreLists' =>$mobiExploreLists,
+            'mobiExploreLevels'=>$mobiExploreLevels,
+            'mobiAsWellAs'=>$mobiAsWellAs,
+            'mobiConditions'=>$mobiConditions,
+            'mobiConditionsLists'=>$mobiConditionsLists,
+            'mobiPrice' => $mobiPrice,
+
 
         ]);
     }

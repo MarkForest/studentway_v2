@@ -44,6 +44,7 @@ AdminAsset::register($this);
 
                 ['label' => 'Главная', 'url' => ['/admin/default/index']],
                 ['label' => 'Курсы Польского', 'url' => ['/admin/admin-course-polish/index']],
+                ['label' => 'Мобильный(Курсы)', 'url' => ['/admin/mobi-course-polish/index']],
                 ['label' => 'Институты', 'url' => ['/admin/institutes/index']],
                 ['label' => 'Изображения', 'url' => ['/admin/images/index']],
 

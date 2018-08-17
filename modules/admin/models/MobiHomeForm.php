@@ -1,6 +1,7 @@
 <?php
   namespace app\modules\admin\models;
   use yii\base\Model;
+  use app\models\MobiHome;
   class MobiHomeForm extends Model
   {
     public $desc_ru;
@@ -15,8 +16,8 @@
 
     public function rules(){
       return [
-          [['desc_ru', 'desc_uk', 'header_ru', 'header_uk', 'contact_one', 'contact_two', 'address_ru', 'address_uk'], 'string', 'max' => 50],
-          [['region_key'], 'string', 'max' => 10],
+          [['header_ru', 'header_uk', 'contact_one', 'contact_two', 'address_ru', 'address_uk'], 'string', 'max' => 50],
+          [['desc_ru', 'desc_uk'], 'string', 'max' => 500],
       ];
     }
     public function attributeLabels(){
@@ -34,7 +35,7 @@
       ];
     }
     public function saveData(){
-      $mobiHome = MobiHome::findOne(['region_key'=>$this->$reg]);
+      $mobiHome = MobiHome::findOne(['region_key'=>$this->reg]);
       $mobiHome->desc_ru = $this->desc_ru;
       $mobiHome->desc_uk = $this->desc_uk;
       $mobiHome->header_ru = $this->header_ru;
@@ -43,6 +44,7 @@
       $mobiHome->contact_two = $this->contact_two;
       $mobiHome->address_ru = $this->address_ru;
       $mobiHome->address_uk = $this->address_uk;
+      $mobiHome->region_key = $this->reg;
 
       return $mobiHome->save(false);
     }

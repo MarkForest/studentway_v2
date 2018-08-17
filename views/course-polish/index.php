@@ -51,65 +51,62 @@ $this->title='Polish|StudentWay';
     <div class="gradient"></div>
     <div class="container">
         <div class="row">
-			<div class="col-md-12 text-right soc-block">
-                <a target="_blank" href="<?=\yii\helpers\Url::to('https://www.facebook.com/studentway.ukraina/')?>"><img src="/images/facebook_color.png" alt="" class="soc-icons hidden-sm hidden-xs"></a>
-                <a target="_blank" href="<?=\yii\helpers\Url::to('https://www.instagram.com/studentway_ukraina/')?>"><img src="/images/instagram_color.png" alt="" class="soc-icons hidden-sm hidden-xs"></a>
-                <a target="_blank" href="<?=\yii\helpers\Url::to('https://www.youtube.com/channel/UCTZ6RKr62Fc3GgXOdnvWXuQ')?>"><img src="/images/youtube_color.png" alt="" class="soc-icons hidden-sm hidden-xs"></a>
-                <a target="_blank" href="<?=\yii\helpers\Url::to('https://web.telegram.org/#/im?p=@studentwaypl')?>"><img src="/images/telegram.png" alt="" class="soc-icons hidden-sm hidden-xs"></a>
-                <a target="_blank" href="<?=\yii\helpers\Url::to('https://twitter.com/StudentwayU')?>"><img src="/images/twiter_color.png" alt="" class="soc-icons hidden-sm hidden-xs"></a>
-            </div>
-            <div class="col-md-7 home-content-text-block hidden-xs hidden-sm">
-                <h1><?=$loc=='uk'?$home->title_uk:$home->title_ru?></h1>
-                <?php if (isset($listHome)):?>
-                <ul>
-                    <?php foreach ($listHome as $list):?>
-                    <li><i class="icon-check2"></i><?=$loc=='uk'?$list->text_uk:$list->text_ru?></li>
-                    <?php endforeach;?>
-                </ul>
-                <?php endif;?>
-            </div>
-            <!-- Mobile devices home-->
-            <div class="col-sm-12 col-xs-12 hidden-md hidden-lg">
-                <div class="mobi__contact text-right">
-                <p class="mobi__contact_tel"><a href="tel: <?=nl2br($mobiHome['contact_one'])?>"><?=nl2br($mobiHome['contact_one'])?></a></p>
-                    <p class="mobi__contact_tel"><a href="tel: <?=nl2br($mobiHome['contact_two'])?>"><?=nl2br($mobiHome['contact_two'])?></a></p>
-                    <p class="mobi__contact_address"><?=nl2br($loc=='ru'?$mobiHome['address_ru']:$mobiHome['address_uk'])?></p>
-                </div>
-            </div>
-            <div class="col-sm-12 col-xs-12 hidden-md hidden-lg">
-                <div class="mobi__header text-center">
-                    <h1 class="mobi__header_text"><?=nl2br($loc=='ru'?$mobiHome['header_ru']:$mobiHome['header_uk'])?></h1>
-                </div>
-            </div>
-            <div class="col-sm-12 col-xs-12 hidden-md hidden-lg">
-                <div class="mobi__desc text-center">
-                    <h3 class="mobi__desc_text"><?=nl2br($loc=='ru'?$mobiHome['desc_ru']:$mobiHome['desc_uk'])?></h3>
-                </div>
-            </div>
+			<div class="col-md-12 text-right soc-block hidden-sm hidden-xs">
+        <a target="_blank" href="<?=\yii\helpers\Url::to('https://www.facebook.com/studentway.ukraina/')?>"><img src="/images/facebook_color.png" alt="" class="soc-icons"></a>
+        <a target="_blank" href="<?=\yii\helpers\Url::to('https://www.instagram.com/studentway_ukraina/')?>"><img src="/images/instagram_color.png" alt="" class="soc-icons"></a>
+        <a target="_blank" href="<?=\yii\helpers\Url::to('https://www.youtube.com/channel/UCTZ6RKr62Fc3GgXOdnvWXuQ')?>"><img src="/images/youtube_color.png" alt="" class="soc-icons"></a>
+        <a target="_blank" href="<?=\yii\helpers\Url::to('https://web.telegram.org/#/im?p=@studentwaypl')?>"><img src="/images/telegram.png" alt="" class="soc-icons"></a>
+        <a target="_blank" href="<?=\yii\helpers\Url::to('https://twitter.com/StudentwayU')?>"><img src="/images/twiter_color.png" alt="" class="soc-icons"></a>
+      </div>
+      <div class="col-md-7 home-content-text-block hidden-xs hidden-sm">
+          <h1><?=$loc=='uk'?$home->title_uk:$home->title_ru?></h1>
+          <?php if (isset($listHome)):?>
+          <ul>
+              <?php foreach ($listHome as $list):?>
+              <li><i class="icon-check2"></i><?=$loc=='uk'?$list->text_uk:$list->text_ru?></li>
+              <?php endforeach;?>
+          </ul>
+          <?php endif;?>
+      </div>
+      <!-- Mobile devices home-->
+      <div class="col-sm-12 col-xs-12 hidden-md hidden-lg">
+          <div class="mobi__contact text-right">
+          <p class="mobi__contact_tel"><a href="tel: <?=nl2br($mobiHome['contact_one'])?>"><?=nl2br($mobiHome['contact_one'])?></a></p>
+              <p class="mobi__contact_tel"><a href="tel: <?=nl2br($mobiHome['contact_two'])?>"><?=nl2br($mobiHome['contact_two'])?></a></p>
+              <p class="mobi__contact_address"><?=nl2br($loc=='ru'?$mobiHome['address_ru']:$mobiHome['address_uk'])?></p>
+          </div>
+      </div>
+      <div class="col-sm-12 col-xs-12 hidden-md hidden-lg">
+          <div class="mobi__header text-center">
+              <h1 class="mobi__header_text"><?=nl2br($loc=='ru'?$mobiHome['header_ru']:$mobiHome['header_uk'])?></h1>
+          </div>
+      </div>
+      <div class="col-sm-12 col-xs-12 hidden-md hidden-lg">
+          <div class="mobi__desc text-center">
+              <h3 class="mobi__desc_text"><?=nl2br($loc=='ru'?$mobiHome['desc_ru']:$mobiHome['desc_uk'])?></h3>
+          </div>
+      </div>
             <!-- end Mobile devices home-->
-            <div class="col-md-4 col-md-offset-1 col-sm-12 col-xs-12 home-content-text-block">
-                <?php $form = ActiveForm::begin(['id'=>'RequestCallMeForm', 'options'=>['class'=>'form']]);?>
-                    <p><?=nl2br($loc=='ru'?$formHome['desc_ru']:$formHome['desc_uk'])?></p>
-                    <h3><?=nl2br($loc=='ru'?$formHome['header_ru']:$formHome['header_uk'])?></h3>
-                    <div class="form-group">
-                        <?= $form->field($modelRequestCallMe, 'region_key')
-                            ->textInput(['class'=>'hidden', 'value'=>$reg])->label(false);?>
-                        <?= $form->field($modelRequestCallMe, 'fullname')
-                            ->textInput(['class'=>'form-control','placeholder'=>nl2br($loc=='ru'?$formHome['name_placeholder_ru']:$formHome['name_placeholder_uk']), 'id'=>'fullname'])
-                            ->label(false);?>
-
-<!--                        <input type="text" class="form-control" placeholder="--><?//=nl2br($loc=='ru'?$formHome['name_placeholder_ru']:$formHome['name_placeholder_uk'])?><!--" id="fullname">-->
-                        <?= $form->field($modelRequestCallMe, 'tall_number')
-                            ->textInput(['class'=>'form-control','placeholder'=>nl2br($loc=='ru'?$formHome['tell_placeholder_ru']:$formHome['tell_placeholder_uk']), 'id'=>'phoneNumber'])
-                            ->label(false);?>
-<!--                        <input type="text" class="form-control" placeholder="--><?//=nl2br($loc=='ru'?$formHome['tell_placeholder_ru']:$formHome['tell_placeholder_uk'])?><!--" id="phoneNumber">-->
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" class="btnHomeForm" value="<?=nl2br($loc=='ru'?$formHome['button_text_ru']:$formHome['button_text_uk'])?>">
-                    </div>
-                <?php ActiveForm::end()?>
-            </div>
+      <div class="col-md-4 col-md-offset-1 col-sm-12 col-xs-12 home-content-text-block">
+          <?php $form = ActiveForm::begin(['id'=>'RequestCallMeForm', 'options'=>['class'=>'form']]);?>
+              <p><?=nl2br($loc=='ru'?$formHome['desc_ru']:$formHome['desc_uk'])?></p>
+              <h3><?=nl2br($loc=='ru'?$formHome['header_ru']:$formHome['header_uk'])?></h3>
+              <div class="form-group">
+                  <?= $form->field($modelRequestCallMe, 'region_key')
+                      ->textInput(['class'=>'hidden', 'value'=>$reg])->label(false);?>
+                  <?= $form->field($modelRequestCallMe, 'fullname')
+                      ->textInput(['class'=>'form-control','placeholder'=>nl2br($loc=='ru'?$formHome['name_placeholder_ru']:$formHome['name_placeholder_uk']), 'id'=>'fullname'])
+                      ->label(false);?>
+                  <?= $form->field($modelRequestCallMe, 'tall_number')
+                      ->textInput(['class'=>'form-control','placeholder'=>nl2br($loc=='ru'?$formHome['tell_placeholder_ru']:$formHome['tell_placeholder_uk']), 'id'=>'phoneNumber'])
+                      ->label(false);?>
+              </div>
+              <div class="form-group">
+                  <input type="submit" class="btnHomeForm" value="<?=nl2br($loc=='ru'?$formHome['button_text_ru']:$formHome['button_text_uk'])?>">
+              </div>
+            <?php ActiveForm::end()?>
         </div>
+    </div>
     </div>
     </div>
 </section>
@@ -122,7 +119,7 @@ $this->title='Polish|StudentWay';
                     <div class="col-md-8 col-md-offset-2 subtext to-animate">
                         <h3><?=$loc=='uk'?$privilege->disc_uk:$privilege->disc_ru?></h3>
                     </div>
-                </div>f
+                </div>
             </div>
         </div>
     </div>
@@ -197,8 +194,13 @@ $this->title='Polish|StudentWay';
                     </li>
                   <?php endforeach;?>
                 </ul>
+                <div class="mobi__explore ">
+                    <div class="mobi__explore_header text-center">
+                        <h2><?=$loc=='ru'?'Расписание групп':'Розклад груп'?></h2>
+                    </div>
+                </div>
                 <ul class="mobi__explore_levels">
-                  <<?php foreach ($mobiExploreLevels as $key => $value): ?>
+                  <?php foreach ($mobiExploreLevels as $key => $value): ?>
                     <li class="mobi__explore_levels_item">
                         <div class="mobi__explore_levels_item_level">
                             <p><?=nl2br($value['level'])?></p>
@@ -229,15 +231,14 @@ $this->title='Polish|StudentWay';
         <div class="row">
             <div class="col-sm-12 col-xs-12 hidden-md hidden-lg">
                 <div class="mobi__additionally_header text-center">
-                    <h2>Дополнительно</h2>
+                    <h2><?=nl2br($loc=='ru'?$mobiAdditionally['header_ru']:$mobiAdditionally['header_uk'])?></h2>
                 </div>
                 <div class="mobi__additionally_desc">
-                    <p>Наши ученики получают доступ к учебникам на польском языке:</p>
+                    <p><?=nl2br($loc=='ru'?$mobiAdditionally['desc_ru']:$mobiAdditionally['desc_uk'])?></p>
                     <ul class="mobi__additionally_desc_list">
-                        <li><i class="icon-check2"></i>по математике;</li>
-                        <li><i class="icon-check2"></i>по физике;</li>
-                        <li><i class="icon-check2"></i>по химии;</li>
-                        <li><i class="icon-check2"></i>по экономике;</li>
+                      <?php foreach ($mobiAdditonallyList as $key => $value): ?>
+                        <li><i class="icon-check2"></i><?=nl2br($loc=='ru'?$value['content_ru']:$value['content_uk'])?></li>
+                      <?php endforeach; ?>
                     </ul>
                 </div>
 
@@ -688,10 +689,91 @@ $this->title='Polish|StudentWay';
         </div>
     </div>
 </section>
-<div id="fh5co-footer" data-section="contact" role="contentinfo" class="hidden-sm hidden-xs">
+<!-- Layout for mobile device-->
+<!-- Layout for mibile device block asWellAs -->
+<section class="mobi__asWellAs hidden-lg hidden-md">
     <div class="container">
         <div class="row">
-            <div class="col-md-3 to-animate">
+            <div class="col-xs-12">
+                <h2 class="mobi__asWellAs_header text-center">
+                    <?=nl2br($loc == 'ru'?$mobiAsWellAs['header_ru']:$mobiAsWellAs['header_uk'])?>
+                </h2>
+                <p class="mobi__asWellAs_desc text-center">
+                    <?=nl2br($loc == 'ru'?$mobiAsWellAs['desc_ru']:$mobiAsWellAs['desc_uk']);?>
+                </p>
+                <div class="mobi__asWellAs_button_one text-center">
+                    <?=nl2br($loc == 'ru'?$mobiAsWellAs['button_one_ru']:$mobiAsWellAs['button_one_uk'])?>
+                </div>
+                <p class="mobi__asWellAss_content">
+                  <?=nl2br($loc == 'ru'?$mobiAsWellAs['content_ru']:$mobiAsWellAs['content_uk'])?>
+                </p>
+                <div class="mobi__asWellAs_button_two text-center" data-toggle="modal" data-target="#RequestCallMeFormModal">
+                  <?=nl2br($loc == 'ru'?$mobiAsWellAs['button_two_ru']:$mobiAsWellAs['button_two_uk'])?>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end Layout for mibile device block asWellAs -->
+<!-- Layout for mobile device block conditions-->
+<section class="mobi__connditions hidden-md hidden-lg">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="mobi__conditions_header text-center">
+                    <?=nl2br($loc=='ru'?$mobiConditions['header_ru']:$mobiConditions['header_uk']);?>
+                </h2>
+                <ul class="mobi__conditions_list">
+                  <?php foreach ($mobiConditionsLists as $key => $value): ?>
+                    <li><i class="icon-check2"></i>
+                      <?=nl2br($loc=='ru'?$value['content_ru']:$value['content_uk']);?>
+                    </li>
+                  <?php endforeach; ?>
+                </ul>
+                <div class="mobi__conditions_desc text-center">
+                  <?=nl2br($loc=='ru'?$mobiConditions['desc_ru']:$mobiConditions['desc_uk']);?>
+                </div>
+                <div class="mobi__conditions_button text-center" data-toggle="modal" data-target="#RequestCallMeFormModal">
+                  <?=nl2br($loc=='ru'?$mobiConditions['button_ru']:$mobiConditions['button_uk']);?>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end Layout for mobile device block conditions-->
+<!-- Layout for mobile device block price-->
+<div class="mobi__price_header text-center hidden-md hidden-lg">
+  <h2><?=$loc=='ru'?'Стоимость курса':'Вартість курсу'?></h2>
+</div>
+<section class="mobi__price hidden-md hidden-lg">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+
+                <div class="mobi__price_main mobi__price--item-style text-center">
+                    <?=nl2br($loc=='ru'?$mobiPrice['header_ru']:$mobiPrice['header_uk']);?>
+                </div>
+                <div class="text-center"><i class="glyphicon-plus"></i></div>
+                <div class="mobi__price_additionally_one mobi__price--item-style text-center">
+                  <?=nl2br($loc=='ru'?$mobiPrice['desc_one_ru']:$mobiPrice['desc_one_uk']);?>
+                </div>
+                <div class="text-center"><i class="glyphicon-plus"></i></div>
+                <div class="mobi__price_additionally_two mobi__price--item-style text-center">
+                  <?=nl2br($loc=='ru'?$mobiPrice['desc_two_ru']:$mobiPrice['desc_two_uk']);?>
+                </div>
+                <div class="mobi__price_button text-center" data-toggle="modal" data-target="#RequestCallMeFormModal">
+                  <?=nl2br($loc=='ru'?$mobiPrice['button_ru']:$mobiPrice['button_uk']);?>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end Layout for mobile device block price-->
+<!-- end Layout for mobile device-->
+<div id="fh5co-footer" data-section="contact" role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 to-animate hidden-xs hidden-sm">
                 <h3 class="section-title"><?=$loc=='uk'?$footer->aboutus_title_uk:$footer->aboutus_title_ru?></h3>
                 <p><?=$loc=='uk'?$footer->about_text_uk:$footer->about_text_ru?></p>
                 <p class="copy-right"><?=$loc=='uk'?$footer->copyright_uk:$footer->copyright_ru?><br>
@@ -708,7 +790,7 @@ $this->title='Polish|StudentWay';
                 </ul>
             </div>
 
-            <div class="col-md-6 to-animate">
+            <div class="col-md-6 to-animate hidden-xs hidden-sm">
                 <h3 class="section-title"><?=$loc == 'uk'?'Як добратися?':'Как к нам добраться?'?></h3>
                     <div id="map">
                         <?php
@@ -743,83 +825,7 @@ $this->title='Polish|StudentWay';
         </div>
     </div>
 </div>
-<!-- Layout for mobile device-->
-<!-- Layout for mibile device block asWellAs -->
-<section class="mobi__asWellAs hidden-lg hidden-md">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <h2 class="mobi__asWellAs_header text-center">
-                    <?=nl2br($loc=='ru'?$mobiAsWellAs['header_ru']:$mobiAsWellAs['header_uk'])?>
-                </h2>
-                <p class="mobi__asWellAs_desc text-center">
-                    <?=nl2br($loc=='ru'?$mobiAsWellAs['desc_ru']:$mobiAsWellAs['desc_uk']);?>
-                </p>
-                <div class="mobi__asWellAs_button_one text-center">
-                    <?=nl2br($loc=='ru'?$moboAsWellAs['button_one_ru']:$mobiAsWellAs['button_one_uk'])?>
-                </div>
-                <p class="mobi__asWellAss_content">
-                  <?=nl2br($loc=='ru'?$moboAsWellAs['content_ru']:$mobiAsWellAs['content_uk'])?>
-                </p>
-                <div class="mobi__asWellAs_button_two text-center" data-toggle="modal" data-target="#RequestCallMeFormModal">
-                  <?=nl2br($loc=='ru'?$moboAsWellAs['button_two_ru']:$mobiAsWellAs['button_two_uk'])?>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- end Layout for mibile device block asWellAs -->
-<!-- Layout for mobile device block conditions-->
-<section class="mobi__connditions hidden-md hidden-lg">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <h2 class="mobi__conditions_header text-center">
-                    <?=nl2br($loc=='ru'?$mobiConditions['header_ru']:$mobiConditions['header_uk']);?>
-                </h2>
-                <ul class="mobi__conditions_list">
-                  <?php foreach ($mobiConditionsLists as $key => $value): ?>
-                    <li><i class="icon-check2"></i>
-                      <?=nl2br($loc=='ru'?$value['content_ru']:$value['content_uk']);?>
-                    </li>
-                  <?php endforeach; ?>
-                </ul>
-                <div class="mobi__conditions_desc text-center">
-                  <?=nl2br($loc=='ru'?$mobiConditions['desc_ru']:$mobiConditions['desc_uk']);?>
-                </div>
-                <div class="mobi__conditions_button text-center" data-toggle="modal" data-target="#RequestCallMeFormModal">
-                  <?=nl2br($loc=='ru'?$mobiConditions['button_ru']:$mobiConditions['button_uk']);?>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- end Layout for mobile device block conditions-->
-<!-- Layout for mobile device block price-->
-<section class="mobi__price hidden-md hidden-lg">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="mobi__price_main mobi__price--item-style text-center">
-                    <?=nl2br($loc=='ru'?$mobiPrice['header_ru']:$mobiPrice['header_uk']);?>
-                </div>
-                <div class="text-center"><i class="glyphicon-plus"></i></div>
-                <div class="mobi__price_additionally_one mobi__price--item-style text-center">
-                  <?=nl2br($loc=='ru'?$mobiPrice['desc_one_ru']:$mobiPrice['desc_one_uk']);?>
-                </div>
-                <div class="text-center"><i class="glyphicon-plus"></i></div>
-                <div class="mobi__price_additionally_two mobi__price--item-style text-center">
-                  <?=nl2br($loc=='ru'?$mobiPrice['desc_two_ru']:$mobiPrice['desc_two_uk']);?>
-                </div>
-                <div class="mobi__price_button text-center" data-toggle="modal" data-target="#RequestCallMeFormModal">
-                  <?=nl2br($loc=='ru'?$mobiPrice['button_ru']:$mobiPrice['button_uk']);?>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- end Layout for mobile device block price-->
-<!-- end Layout for mobile device-->
+
 
 <?php foreach ($listQuestion as $list):?>
 <div class="modal fade" id="<?=$list->id?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

@@ -120,7 +120,8 @@ a.desc:after {
 
 .navbar-inverse .navbar-nav > li > a{
     font-size: 14px;
-    font-style: italic;
+    font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+    font-weight: bold;
 }
 
 .drop{
@@ -433,4 +434,3 @@ choose institute
     color:white;
     background:rgba(0, 198, 215,0.5);
 }
-

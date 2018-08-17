@@ -41,7 +41,7 @@ class MobiExploreLevels extends \yii\db\ActiveRecord
             [['MobiExplore_id'], 'required'],
             [['MobiExplore_id'], 'integer'],
             [['level'], 'string', 'max' => 25],
-            [['period_ru', 'period_uk', 'info_ru', 'info_uk', 'price', 'price_period_ru', 'price_period_uk'], 'string', 'max' => 50],
+            [['period_ru', 'period_uk', 'price', 'price_period_ru', 'price_period_uk'], 'string', 'max' => 50],
             [['desc_ru', 'desc_uk'], 'string', 'max' => 255],
             [['MobiExplore_id'], 'exist', 'skipOnError' => true, 'targetClass' => MobiExplore::className(), 'targetAttribute' => ['MobiExplore_id' => 'id']],
         ];

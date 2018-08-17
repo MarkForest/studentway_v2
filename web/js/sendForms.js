@@ -28,7 +28,6 @@ $(document).ready(function () {
     });
 
     $('[id="RequestCallMeForm2"]').on('beforeSubmit',function () {
-        alert("sdf");
         var data= $(this).serialize();
 
         $('.modal').hide();
@@ -450,4 +449,149 @@ $(document).ready(function () {
         return false;
     });
 
+    //Mobi Forms
+    $('[id="MobiHomeForm"]').on('beforeSubmit',function () {
+
+        var data = $(this).serialize();
+
+        $.ajax({
+            url:'/admin/mobi-course-polish/save-mobi-home',
+            type: 'POST',
+            data: data,
+            success: function (res) {
+                if(res == true) {
+                    $('.alert-success').fadeToggle(500);
+                    $('.alert-success').fadeOut(10000);
+                }
+                else{
+                    $('.alert-danger').fadeToggle(500);
+                    $('.alert-danger').fadeOut(20000);
+                }
+            },
+            error:function () {
+                alert('Error')
+            }
+        });
+        return false;
+    });
+    $('[id="MobiExploreForm"]').on('beforeSubmit',function () {
+
+        var data = $(this).serialize();
+
+        $.ajax({
+            url:'/admin/mobi-course-polish/save-mobi-explore',
+            type: 'POST',
+            data: data,
+            success: function (res) {
+                if(res == true) {
+                    $('.alert-success').fadeToggle(500);
+                    $('.alert-success').fadeOut(10000);
+                }
+                else{
+                    $('.alert-danger').fadeToggle(500);
+                    $('.alert-danger').fadeOut(20000);
+                }
+            },
+            error:function () {
+                alert('Error')
+            }
+        });
+        return false;
+    });
+    $('[id="MobiAdditionallyForm"]').on('beforeSubmit',function () {
+
+        var data = $(this).serialize();
+
+        $.ajax({
+            url:'/admin/mobi-course-polish/save-mobi-additionally',
+            type: 'POST',
+            data: data,
+            success: function (res) {
+                if(res == true) {
+                    $('.alert-success').fadeToggle(500);
+                    $('.alert-success').fadeOut(10000);
+                }
+                else{
+                    $('.alert-danger').fadeToggle(500);
+                    $('.alert-danger').fadeOut(20000);
+                }
+            },
+            error:function () {
+                alert('Error')
+            }
+        });
+        return false;
+    });
+    $('[id="MobiAsWellAsForm"]').on('beforeSubmit',function () {
+
+        var data = $(this).serialize();
+
+        $.ajax({
+            url:'/admin/mobi-course-polish/save-mobi-as-well-as',
+            type: 'POST',
+            data: data,
+            success: function (res) {
+                if(res == true) {
+                    $('.alert-success').fadeToggle(500);
+                    $('.alert-success').fadeOut(10000);
+                }
+                else{
+                    $('.alert-danger').fadeToggle(500);
+                    $('.alert-danger').fadeOut(20000);
+                }
+            },
+            error:function () {
+                alert('Error')
+            }
+        });
+        return false;
+    });
+    $('[id="MobiConditonsForm"]').on('beforeSubmit',function () {
+
+        var data = $(this).serialize();
+
+        $.ajax({
+            url:'/admin/mobi-course-polish/save-mobi-conditons',
+            type: 'POST',
+            data: data,
+            success: function (res) {
+                if(res == true) {
+                    $('.alert-success').fadeToggle(500);
+                    $('.alert-success').fadeOut(10000);
+                }
+                else{
+                    $('.alert-danger').fadeToggle(500);
+                    $('.alert-danger').fadeOut(20000);
+                }
+            },
+            error:function () {
+                alert('Error')
+            }
+        });
+        return false;
+    });
+    $('[id="MobiPriceForm"]').on('beforeSubmit',function () {
+
+        var data = $(this).serialize();
+
+        $.ajax({
+            url:'/admin/mobi-course-polish/save-mobi-price',
+            type: 'POST',
+            data: data,
+            success: function (res) {
+                if(res == true) {
+                    $('.alert-success').fadeToggle(500);
+                    $('.alert-success').fadeOut(10000);
+                }
+                else{
+                    $('.alert-danger').fadeToggle(500);
+                    $('.alert-danger').fadeOut(20000);
+                }
+            },
+            error:function () {
+                alert('Error')
+            }
+        });
+        return false;
+    });
 })

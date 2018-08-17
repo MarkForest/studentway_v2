@@ -40,6 +40,8 @@ use app\models\MobiExploreLevels;
 use app\models\MobiAsWellAs;
 use app\models\MobiConditons;
 use app\models\MobiConditonsList;
+use app\models\MobiAdditionally;
+use app\models\MobiAdditionallyList;
 use app\models\MobiPrice;
 use app\models\RequestCallMeForm;
 use Yii;
@@ -196,6 +198,8 @@ class CoursePolishController extends Controller
         $mobiExplore = MobiExplore::findOne(['region_key'=>$reg]);
         $mobiExploreLists = MobiExploreList::find()->where(['MobiExplore_id'=>$mobiExplore['id']])->all();
         $mobiExploreLevels = MobiExploreLevels::find()->where(['MobiExplore_id'=>$mobiExplore['id']])->all();
+        $mobiAdditonally = MobiAdditionally::findOne(['region_key'=>$reg]);
+        $mobiAdditonallyList = MobiAdditionallyList::find()->where(['MobiAdditionally_id'=>$mobiAdditonally['id']])->all();
 
         //mobiAsWellAs
         $mobiAsWellAs = MobiAsWellAs::findOne(['region_key'=>$reg]);
@@ -246,6 +250,8 @@ class CoursePolishController extends Controller
             'mobiExplore'=>$mobiExplore,
             'mobiExploreLists' =>$mobiExploreLists,
             'mobiExploreLevels'=>$mobiExploreLevels,
+            'mobiAdditionally'=>$mobiAdditonally,
+            'mobiAdditonallyList'=>$mobiAdditonallyList,
             'mobiAsWellAs'=>$mobiAsWellAs,
             'mobiConditions'=>$mobiConditions,
             'mobiConditionsLists'=>$mobiConditionsLists,

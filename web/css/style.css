@@ -299,6 +299,22 @@ h1, h2, h3, h4, h5, h6 {
   text-align: right;
   margin-top: 70px;
 }
+
+#fh5co-home .home-first-text-block .text-block{
+  font-size: 18px;
+  text-align: center;
+  width: 80%;
+}
+
+#fh5co-home .home-content-text-block{
+  z-index: 9;
+  color:#f7f9fa;
+  text-align: right;
+  margin-top: 70px;
+}
+
+
+
 #fh5co-home .home-content-text-block h1{
   color:#f7f9fa;
   font-weight: bold;
@@ -310,9 +326,75 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   color: #1fb5f6;
 }
+
 #fh5co-home .home-content-text-block ul .icon-check2{
   padding-right: 10px;
   color:#f7f9fa;
+}
+
+#fh5co-home .home-content-text-block .stock-block{
+  text-align: center;
+  width: auto;
+  background:#FF8500;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#fh5co-home .home-content-text-block .stock-block p span{
+  font-size: 62px;
+  margin-top: 10px;
+}
+
+#fh5co-home .home-content-text-block .stock-block p{
+  font-size: 32px;
+  line-height: 45px;
+  margin-bottom: 0;
+}
+
+#fh5co-home .home-content-text-block .cast p{
+  font-size: 150px;
+  color: #f7f9fa;
+  margin-bottom: 0;
+  display: inline;
+  font-weight: bold;
+  line-height: 100px;
+  padding-top: 10px;
+}
+#fh5co-home .home-content-text-block .cast{
+  text-align: center;
+  margin-top: 10px;
+}
+#fh5co-home .home-content-text-block .cast span{
+  font-size: 40px;
+  display: inline;
+}
+
+#fh5co-home .home-content-text-block .cast-button{
+  border:2px solid #FF8500;
+  border-radius: 50px;
+  width: auto;
+  text-align: center;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+#fh5co-home .home-content-text-block .cast-button:hover{
+  background: #FF8500;
+}
+
+#fh5co-home .home-content-text-block .cast-button p{
+  color: #f7f9fa;
+  font-weight: bold;
+  font-size: 34px;
+  margin-bottom: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#fh5co-home .home-content-text-block .cast-button span{
+  color: #f7f9fa;
+  font-weight: bold;
+  font-size: 26px;
 }
 
 #fh5co-home .home-content-text-block .form{
@@ -1671,7 +1753,7 @@ a:hover{
 .mobi__contact p{
   padding:0;
   margin: 0;
-  font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+  font-family: Arial, serif;
 }
 
 .mobi__contact{
@@ -1679,7 +1761,7 @@ a:hover{
 }
 #fh5co-home .mobi__contact_tel a{
   color:#fff;
-  font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+  /* font-family: Arial, serif; */
   text-decoration: none;
 }
 
@@ -1687,7 +1769,7 @@ a:hover{
   color:#fff;
   margin-top: 25px;
   font-weight: bold;
-  font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+  /* font-family: Arial, serif; */
 
 }
 #fh5co-home .mobi__desc_text{
@@ -1695,7 +1777,7 @@ a:hover{
   margin: 0;
   font-weight: bold;
   line-height: 3rem;
-  font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+  /* font-family: Arial, serif; */
 }
 #fh5co-home .mobi__desc{
   border: 3px solid #0799d2;
@@ -1704,13 +1786,13 @@ a:hover{
 }
 /*######### Explore #################*/
 #fh5co-explore .mobi__explore_header h2{
-  font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+  /* font-family: Arial, serif; */
   color:#000;
 }
 #fh5co-explore .mobi__explore_list{
   list-style: none;
   padding: 0;
-  font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+  /* font-family: Arial, serif; */
   color:#000;
   margin-bottom: 40px;
 }
@@ -1727,7 +1809,7 @@ a:hover{
   padding-bottom:8px;
   border-radius: 5px;
   margin-top: 15px;
-  font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+  /* font-family: Arial, serif; */
 }
 #fh5co-explore .mobi__explore_levels_item p{
   margin: 0;
@@ -1761,7 +1843,7 @@ a:hover{
   padding:15px;
   font-size: 22px;
   font-weight: bold;
-  font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+  /* font-family: Arial, serif; */
   color: #fff;
   text-align: center;
   border-radius: 5px;
@@ -1773,7 +1855,7 @@ a:hover{
 
 /*######### Additionally #################*/
 #fh5co-explore .mobi__additionally_header h2{
-  font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+  /* font-family: Arial, serif; */
   color:#000;
   margin-top:20px;
 }
@@ -1787,7 +1869,7 @@ a:hover{
   font-size: 20px;
   color:#000;
   margin-bottom: 10px;
-  font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+  /* font-family: Arial, serif; */
 }
 
 
@@ -1796,7 +1878,7 @@ a:hover{
   padding:0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+  /* font-family: Arial, serif; */
   color:#000;
 }
 
@@ -1808,14 +1890,14 @@ a:hover{
 h2.mobi__asWellAs_header, .mobi__price_header h2 {
   color: #000080;
   margin-top: 20px;
-  font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+  /* font-family: Arial, serif; */
   margin-bottom: 0;
   font-weight: bold;
 }
 .mobi__asWellAs_desc, .mobi__asWellAss_content{
     color: #000080;
     font-size: 23px;
-    font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+    /* font-family: Arial, serif; */
     margin-bottom: 20px;
 }
 
@@ -1823,7 +1905,7 @@ h2.mobi__asWellAs_header, .mobi__price_header h2 {
   background: #fff;
   color: #000080;
   border-radius: 8px;
-  font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+  /* font-family: Arial, serif; */
   font-weight: bold;
   margin-bottom: 20px;
   padding: 5px;
@@ -1833,7 +1915,7 @@ h2.mobi__asWellAs_header, .mobi__price_header h2 {
   padding:15px;
   font-size: 22px;
   font-weight: bold;
-  font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+  /* font-family: Arial, serif; */
   color: #fff;
   text-align: center;
   border-radius: 5px;
@@ -1846,7 +1928,7 @@ h2.mobi__asWellAs_header, .mobi__price_header h2 {
 .mobi__conditions_header{
   color: #000080;
   margin-top: 20px;
-  font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+  /* font-family: Arial, serif; */
   margin-bottom: 15px;
 }
 
@@ -1861,12 +1943,12 @@ h2.mobi__asWellAs_header, .mobi__price_header h2 {
   font-weight: bold;
 }
 .mobi__conditions_list li{
-  font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+  /* font-family: Arial, serif; */
   color: #000080;
 }
 
 .mobi__conditions_desc, .mobi__price--item-style{
-  font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+  /* font-family: Arial, serif; */
   color: #000080;
   font-weight: bold;
   padding:5px;
@@ -1878,7 +1960,7 @@ h2.mobi__asWellAs_header, .mobi__price_header h2 {
   padding:15px;
   font-size: 22px;
   font-weight: bold;
-  font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+  /* font-family: Arial, serif; */
   color: #fff;
   text-align: center;
   border-radius: 5px;
@@ -1900,7 +1982,7 @@ h2.mobi__asWellAs_header, .mobi__price_header h2 {
 
 /*######### new modal #################*/
 #RequestCallMeFormModal{
-  font-family: "Comic Sans MS", "PT Sans", Arial, serif;
+  /* font-family: Arial, serif; */
 }
 #RequestCallMeFormModal .modal-header p{
   color: #fff;

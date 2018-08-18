@@ -50,6 +50,19 @@ $this->title='Polish|StudentWay';
 <section id="fh5co-home" data-section="home">
     <div class="gradient"></div>
     <div class="container">
+      <div class="row hidden-xs hidden-sm">
+            <div class="col-md-5 home-first-text-block pull-left">
+                <p class="text-block">
+                    <?=$loc=='uk'?$home->header_title_1_uk:$home->header_title_1_ru?>
+                </p>
+            </div>
+
+            <div class="col-md-5 col-md-offset-2 home-first-text-block pull-right">
+                <p class="text-block">
+                    <?=$loc=='uk'?$home->header_title_2_uk:$home->header_title_2_ru?>
+                </p>
+            </div>
+        </div>
         <div class="row">
 			<div class="col-md-12 text-right soc-block hidden-sm hidden-xs">
         <a target="_blank" href="<?=\yii\helpers\Url::to('https://www.facebook.com/studentway.ukraina/')?>"><img src="/images/facebook_color.png" alt="" class="soc-icons"></a>

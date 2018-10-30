@@ -1,0 +1,507 @@
+*
+{
+	/* margin: 0;
+	padding: 0; */
+}
+
+#first
+{
+	width: 100%;
+	height: 100vh;
+}
+ #firstrow
+{
+	margin-top: 15vh;
+	margin-bottom: 15vh;
+	border-top: solid 1px silver;
+	border-bottom: solid 1px silver;
+	background-color: #F6EEEE;
+	
+}
+/* #possionfoto .col-xs-12, #possionfoto .col-md-6, #possionfoto .col-lg-6
+{
+	margin: 0 !important; //удаление отступов bootstrap
+	padding: 0 !important;
+} */
+.blockfirst
+{
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.blockfirst img
+{
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 27px/25px;
+}
+.textmain p
+{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.textmain button
+{
+	margin-top: 50px;
+	width: 80%;
+}
+#second
+{
+	margin-top: 12%;
+}
+#second h2
+{
+	font-weight: bold;
+	text-align: center;
+	font-size: 3.0rem;
+}
+#second h3
+{
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 20px;
+	font-size: 2.0rem;
+}
+#second p
+{
+	margin-top: 10px;
+}
+#second button
+{
+	margin-top: 20px;
+	width: 80%;
+}
+.whyaustria
+{
+	/* width: 100%; */
+	margin-top: 2%;
+}
+
+.icons
+{
+	padding-top: 20px;
+	text-align: center;
+	border: solid 1px silver;
+	border-radius: 5px; 
+}
+/* .advanteg
+{
+	display: block;
+	margin-top: 10vh;
+} */
+.whyaustmain
+{
+	height: 30vh;
+}
+.whyaustmain h2
+{
+	font-weight: bold;
+	font-size: 2.0rem;
+	/* margin-bottom: 20px; */
+}
+#third
+{
+	/* width: 100%; */
+	/* border: solid 1px silver; */
+	margin-top: 10vh;
+}
+#third h2
+{
+	font-weight: bold;
+	text-align: center;
+	font-size: 3.0rem;
+}
+#third button
+{
+	width: 80%;
+	margin-bottom: 10px;
+}
+.univer
+{
+	/* width: 100%; */
+	/* height: 250px;
+	height: auto; */
+	margin-top: 10px;
+}
+.univerinfo
+{
+	height: 250px;
+	height: auto;
+	/* width: 100%; */
+}
+.bord
+{
+	border: solid 1px silver;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.univerinfo h4
+{
+	text-align: center;
+	font-weight: bold;
+}
+.univerinfo a
+{
+	font-weight: bold;
+	text-decoration: none;
+}
+.univerinfo img
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 15px/25px;
+}
+.univerinfo a:hover, .univerinfo a:visited
+{
+	font-weight: bold;
+	text-decoration: none;
+}
+.universecond
+{
+	/* margin-top: 20px; */
+}
+#four
+{
+	width: 100%;
+	/* border: solid 1px silver; */
+	/* margin-top: 10%; */
+}
+#four h2
+{
+	text-align: center;
+	font-weight: bold;
+	margin-top: 10%;
+	margin-bottom: 5%;
+	font-size: 3.0rem;
+}
+#four h4
+{
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+#four p
+{
+	text-align: center;
+	padding: 10px;
+}
+#four button
+{
+	margin-top: 40px;
+	margin-bottom: 10px;
+	width: 80%;
+}
+.bordfour
+{
+
+	padding: 5px;
+}
+
+#five
+{
+
+}
+#five h2
+{
+	text-align: center;
+	font-weight: bold;
+	/* margin-bottom: 5vh; */
+	font-size: 3.2rem;
+	margin-top: 10%;
+	margin-bottom: 20px;
+}
+#fiverow
+{
+	/* border: solid 1px silver;
+	border-radius: 5px; */
+}
+.aboutus
+{
+
+}
+	
+.aboutus p, .aboutus img
+{
+	padding: 20px 10px 20px 10px;
+}
+.aboutus img
+{
+	border-radius: 35px/45px;
+}
+.bordaboutus
+{
+	margin: 10px;
+	border: solid 1px silver;
+	border-radius: 5px;
+}
+.whyWe
+{
+    height: 150px;     /* Изменить высоту при добавлении текста */
+}
+.why
+{
+	/* margin-left: 30px; */
+	/* display: inline-block; */
+	/* width: 100%; */
+}
+.whyWe p
+{
+	text-align: center;
+	padding: 10px 10px 20px 10px;
+}
+/* #five .col-xs-12, #five .col-lg-4
+{
+	margin: 0 !important; //удаление отступов bootstrap
+	padding: 0 !important;
+} */
+.forbackground
+{
+	background-color: #F1EEEE;
+	border: solid 1px silver;
+	border-radius: 5px;
+	height: 90%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 20px;
+}
+.consultation button
+{
+	margin-top: 20px;
+	border: solid 1px silver;
+	width: 70%;
+}
+
+.review
+{
+
+}
+.review p
+{
+	padding: 20px 20px 20px 20px;
+}
+.bordreview
+{
+	margin: 10px;
+	background-color: #F1EEEE;
+	border: solid 1px silver;
+	border-radius: 5px;
+}
+#six
+{
+	margin-top: 40px;
+}
+/* #six .col-xs-12, #six .col-sm-12, #six .col-md-4, #six .col-lg-4
+{
+	margin: 0 !important; //удаление отступов bootstrap
+	padding: 0 !important;
+} */
+#six button
+{
+	/* width: 70%; */
+}
+#six h2
+{
+	text-align: center;
+	font-weight: bold;
+	font-size: 3.0rem;
+	margin-bottom: 20px;
+}
+#six h3
+{
+	text-align: center;
+	font-weight: bold;
+}
+
+.firsmap
+{
+	width: 100%;
+	height: 420px;
+}
+.firsmap1
+{
+	width: 100%;
+	height: 370px;
+}
+#footers
+{
+
+	height: 80px;
+	background-color: #B5B2B2;
+	margin-top: 40px;
+}
+#footers p
+{
+	padding-left: 10%;
+	padding-top: 30px;
+}
+
+#questions
+{
+	margin-top: 30px;
+	width: 100%;
+}
+#questions h2
+{
+	text-align: center;
+	font-weight: bold;
+	font-size: 3.0rem;
+	margin-bottom: 30px;
+}
+.spoiler
+{
+	/* border: solid 1px silver;
+	border-radius: 5px; */
+	
+}
+
+/*Спойлер начало */
+details {
+	display:block; 
+	width: 80%;
+	margin: 10px 20px;
+}
+summary {
+	display:block; 
+	background: #D9D2D2;
+	border-radius: 5px;
+	border: solid 1px silver;
+	padding: 10px;
+	cursor: pointer;
+	font-weight:bold;
+	font-size: 1.6rem;
+}
+
+summary:-webkit-details-marker {
+   color:#FF0000; 
+   background:#FFFFFF; 
+}
+
+details[open] summary:-webkit-details-marker {
+   color:#0000FF; 
+   background:#00FFFF;
+}
+summary:-webkit-details-marker {
+   display: none
+}
+
+summary:after {
+   /* content: "+"; */
+   color: #FFFFFF;
+   float: left;
+   font-size: 1.5em;
+   font-weight: bold;
+   margin: -5px 5px 0 0;
+   padding: 0;
+   text-align: center;
+   width: 20px;
+}
+
+details[open] summary: after {
+   content: "-";
+    color: #FFFFFF
+}
+details p
+{
+	padding-top: 10px;
+}
+
+/* Спойлер конец */
+
+
+/* Страница университеты */
+#seven
+{
+	margin-top: 5%;
+}
+#seven h1
+{
+	text-align: center;
+	font-weight: bold;
+	font-size: 3.2rem;
+}
+#seven ul
+{
+	padding-left: 10%;
+	padding-top: 8px;
+	font-size: 2.0rem;
+	font-weight: bold;
+}
+#seven li
+{
+	margin-top: 5px;
+}
+#seven img
+{
+	border-radius: 18px/22px;
+}
+.univ, .univfoto
+{
+	height: 100%;
+	padding: 10px;
+}
+.univfoto
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.univ #btnfirst
+{
+	margin-top: 20px;
+	width: 250px;
+}
+.univ #btnsecond
+{
+	margin-top: 15px;
+	margin-bottom: 5px;
+	width: 250px;
+}
+.colrs
+{
+	color: #E5D806;
+	font-size: 2.2rem;
+}
+
+.totalinfo p
+{
+	padding: 10px 10px 8px 10px;
+	border-radius: 18px/22px;
+}
+#eight h2, #nine h2, #ten h2, #eleven h2
+{
+	text-align: center;
+	font-size: 3.0rem;
+	font-weight: bold;
+	margin: 40px 20px 30px 20px;
+}
+#eight img, #nine p, #nine img, #ten p
+{
+	padding: 10px;
+	border-radius: 18px/22px;
+}
+#nine button, #eleven button
+{
+	width: 90%;
+	margin-top: 20px;
+}
+.otstups
+{
+	margin: 5px 5px 7px 5px;
+}
+.otstupmap
+{
+	margin: 10px;
+	/* border: solid 1px silver;
+	border-radius: 5px; */
+}
+.centermap
+{
+	text-align: center;
+}
+.otstupinfo
+{
+	margin: 5px 5px 7px 5px;
+	padding: 5px 5px 5px 5px;
+}
+
+
+

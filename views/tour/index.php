@@ -8,7 +8,7 @@
       <div class="row">
        <div id="possionfoto">
              <div class="col-xs-12 col-md-6 col-lg-6 blockfirst">
-               <img src="img/students.jpg" class="img-responsive center-block">
+               <img src="/tours/img/students.jpg" class="img-responsive center-block">
              </div>
              </div>
 
@@ -148,7 +148,7 @@
          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 univerinfo">
 
 
-           <img src="img/venskii.jpg" class="img-rounded img-responsive center-block">
+           <img src="/tours/img/venskii.jpg" class="img-rounded img-responsive center-block">
 
          </div>
          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 univerinfo">
@@ -165,7 +165,7 @@
        <div class="bord">
        <div class="row">
          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 univerinfo">
-           <img src="img/venskii.jpg" class="img-responsive center-block">
+           <img src="/tours/img/venskii.jpg" class="img-responsive center-block">
 
          </div>
          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 univerinfo">
@@ -187,7 +187,7 @@
        <div class="bord">
        <div class="row">
          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 univerinfo">
-           <img src="img/venskii.jpg" class="img-responsive center-block">
+           <img src="/tours/img/venskii.jpg" class="img-responsive center-block">
 
          </div>
          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 univerinfo">
@@ -204,7 +204,7 @@
        <div class="bord">
        <div class="row">
          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 univerinfo">
-           <img src="img/venskii.jpg" class="img-responsive center-block">
+           <img src="/tours/img/venskii.jpg" class="img-responsive center-block">
 
          </div>
          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 univerinfo">
@@ -312,7 +312,7 @@
    <div class="row" id="fiverow">
  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 aboutus">
 
-   <img src="img/students.jpg" class="img-responsive center-block">
+   <img src="/tours/img/students.jpg" class="img-responsive center-block">
    </div>
 
  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 aboutus">

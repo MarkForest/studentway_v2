@@ -60,4 +60,19 @@ $this->title = 'StudentWay|Menu';
     </div>
     </p>
 </a>
+<a  href="/tour/">
+    <div class="row item-menu">
+        <div class="col-md-3">
+            <div class="img-block">
+                <img src="/tours/img/main.jpg" alt="institute" class="img-responsive img-rounded">
+            </div>
+        </div>
+        <div class="col-md-8">
+            <h3>Университеты Австрии</h3>
+            <p style="text-transform: uppercase">Университеты Австрии открывают большие возможности и перспективы для студентов любых специальностей</p>
+            <div class="link-site text-right"><span>Далее <i class="icon-arrow-right-circle"></i></span></div>
+        </div>
+    </div>
+    </p>
+</a>
 

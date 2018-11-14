@@ -64,7 +64,7 @@ $this->title = 'StudentWay|Menu';
     <div class="row item-menu">
         <div class="col-md-3">
             <div class="img-block">
-                <img src="/tours/img/main.jpg" alt="institute" class="img-responsive img-rounded">
+                <img src="/tours/images/main.jpg" alt="institute" class="img-responsive img-rounded">
             </div>
         </div>
         <div class="col-md-8">
